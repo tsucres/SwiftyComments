@@ -10,43 +10,47 @@
 		13FF7DF427E3BF294FF43AD6 /* Pods_SwiftyComments_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0307551E582C8EF4B6AE1FF /* Pods_SwiftyComments_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		BA747C0E05E2D1DDEC5AC67C /* Pods_SwiftyComments_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D711A1DE749B8D654E96928 /* Pods_SwiftyComments_Tests.framework */; };
+		979B786F1F8BA31300572186 /* DemosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B786E1F8BA31300572186 /* DemosTableViewController.swift */; };
+		979B78731F8BA56F00572186 /* SimpleCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B78711F8BA56F00572186 /* SimpleCommentsViewController.swift */; };
+		979B78741F8BA56F00572186 /* SimpleCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B78721F8BA56F00572186 /* SimpleCommentCell.swift */; };
+		979B78771F8BA66000572186 /* MockupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B78761F8BA66000572186 /* MockupData.swift */; };
+		979B78791F8BA66F00572186 /* LoremSwiftum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B78781F8BA66F00572186 /* LoremSwiftum.swift */; };
+		979B787D1F8BA95E00572186 /* RedditCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B787B1F8BA95E00572186 /* RedditCommentsViewController.swift */; };
+		979B787E1F8BA95E00572186 /* RedditCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B787C1F8BA95E00572186 /* RedditCommentCell.swift */; };
+		979B78821F8BAA1200572186 /* ImgurCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B78801F8BAA1200572186 /* ImgurCommentsViewController.swift */; };
+		979B78831F8BAA1200572186 /* ImgurCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B78811F8BAA1200572186 /* ImgurCommentCell.swift */; };
+		97CBFA141F8CC3F5008C79DC /* HNCommentContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CBFA131F8CC3F5008C79DC /* HNCommentContentParser.swift */; };
+		97CBFA161F8CC3FC008C79DC /* HNCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CBFA151F8CC3FC008C79DC /* HNCommentsViewController.swift */; };
+		97CBFA191F8CC50B008C79DC /* HNCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CBFA181F8CC50B008C79DC /* HNCommentCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = SwiftyComments;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0C8F0BFE685D026D5C3115C7 /* Pods-SwiftyComments_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyComments_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyComments_Tests/Pods-SwiftyComments_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1CC498939563D62229064CAC /* Pods-SwiftyComments_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyComments_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3AFAAE3085DB5675D4B28EB1 /* SwiftyComments.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftyComments.podspec; path = ../SwiftyComments.podspec; sourceTree = "<group>"; };
-		4D711A1DE749B8D654E96928 /* Pods_SwiftyComments_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyComments_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		538BD62B34BBE6E18F325CCA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3AFAAE3085DB5675D4B28EB1 /* SwiftyComments.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyComments.podspec; path = ../SwiftyComments.podspec; sourceTree = "<group>"; };
+		538BD62B34BBE6E18F325CCA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftyComments_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyComments_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* SwiftyComments_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyComments_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		979B786E1F8BA31300572186 /* DemosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosTableViewController.swift; sourceTree = "<group>"; };
+		979B78711F8BA56F00572186 /* SimpleCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCommentsViewController.swift; sourceTree = "<group>"; };
+		979B78721F8BA56F00572186 /* SimpleCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCommentCell.swift; sourceTree = "<group>"; };
+		979B78761F8BA66000572186 /* MockupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupData.swift; sourceTree = "<group>"; };
+		979B78781F8BA66F00572186 /* LoremSwiftum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremSwiftum.swift; sourceTree = "<group>"; };
+		979B787B1F8BA95E00572186 /* RedditCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditCommentsViewController.swift; sourceTree = "<group>"; };
+		979B787C1F8BA95E00572186 /* RedditCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditCommentCell.swift; sourceTree = "<group>"; };
+		979B78801F8BAA1200572186 /* ImgurCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCommentsViewController.swift; sourceTree = "<group>"; };
+		979B78811F8BAA1200572186 /* ImgurCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurCommentCell.swift; sourceTree = "<group>"; };
+		97CBFA131F8CC3F5008C79DC /* HNCommentContentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCommentContentParser.swift; sourceTree = "<group>"; };
+		97CBFA151F8CC3FC008C79DC /* HNCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCommentsViewController.swift; sourceTree = "<group>"; };
+		97CBFA181F8CC50B008C79DC /* HNCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCommentCell.swift; sourceTree = "<group>"; };
 		9B24187D6EE6E1D933C760BD /* Pods-SwiftyComments_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyComments_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D7BDDEA2AF8C9A149FC7038B /* Pods-SwiftyComments_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyComments_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyComments_Tests/Pods-SwiftyComments_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E0307551E582C8EF4B6AE1FF /* Pods_SwiftyComments_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyComments_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4032F0AF9031FC5F59A1DB8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F4032F0AF9031FC5F59A1DB8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +62,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BA747C0E05E2D1DDEC5AC67C /* Pods_SwiftyComments_Tests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,8 +70,6 @@
 			children = (
 				9B24187D6EE6E1D933C760BD /* Pods-SwiftyComments_Example.debug.xcconfig */,
 				1CC498939563D62229064CAC /* Pods-SwiftyComments_Example.release.xcconfig */,
-				D7BDDEA2AF8C9A149FC7038B /* Pods-SwiftyComments_Tests.debug.xcconfig */,
-				0C8F0BFE685D026D5C3115C7 /* Pods-SwiftyComments_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -84,8 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for SwiftyComments */,
-				607FACE81AFB9204008FA782 /* Tests */,
+				607FACD21AFB9204008FA782 /* Examples */,
 				607FACD11AFB9204008FA782 /* Products */,
 				5FC832EE0F4620B3CA2D3C92 /* Pods */,
 				95829DB670B6139D909661F5 /* Frameworks */,
@@ -96,22 +89,26 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* SwiftyComments_Example.app */,
-				607FACE51AFB9204008FA782 /* SwiftyComments_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for SwiftyComments */ = {
+		607FACD21AFB9204008FA782 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				979B787A1F8BA67200572186 /* Data */,
+				979B786E1F8BA31300572186 /* DemosTableViewController.swift */,
+				97CBFA171F8CC402008C79DC /* HN */,
+				979B78841F8BAA1900572186 /* Imgur */,
+				979B787F1F8BA96300572186 /* Reddit */,
+				979B78751F8BA57500572186 /* Simple */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for SwiftyComments";
+			name = Examples;
 			path = SwiftyComments;
 			sourceTree = "<group>";
 		};
@@ -119,23 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,9 +134,54 @@
 			isa = PBXGroup;
 			children = (
 				E0307551E582C8EF4B6AE1FF /* Pods_SwiftyComments_Example.framework */,
-				4D711A1DE749B8D654E96928 /* Pods_SwiftyComments_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		979B78751F8BA57500572186 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				979B78711F8BA56F00572186 /* SimpleCommentsViewController.swift */,
+				979B78721F8BA56F00572186 /* SimpleCommentCell.swift */,
+			);
+			name = Simple;
+			sourceTree = "<group>";
+		};
+		979B787A1F8BA67200572186 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				979B78781F8BA66F00572186 /* LoremSwiftum.swift */,
+				979B78761F8BA66000572186 /* MockupData.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		979B787F1F8BA96300572186 /* Reddit */ = {
+			isa = PBXGroup;
+			children = (
+				979B787C1F8BA95E00572186 /* RedditCommentCell.swift */,
+				979B787B1F8BA95E00572186 /* RedditCommentsViewController.swift */,
+			);
+			name = Reddit;
+			sourceTree = "<group>";
+		};
+		979B78841F8BAA1900572186 /* Imgur */ = {
+			isa = PBXGroup;
+			children = (
+				979B78811F8BAA1200572186 /* ImgurCommentCell.swift */,
+				979B78801F8BAA1200572186 /* ImgurCommentsViewController.swift */,
+			);
+			name = Imgur;
+			sourceTree = "<group>";
+		};
+		97CBFA171F8CC402008C79DC /* HN */ = {
+			isa = PBXGroup;
+			children = (
+				97CBFA181F8CC50B008C79DC /* HNCommentCell.swift */,
+				97CBFA131F8CC3F5008C79DC /* HNCommentContentParser.swift */,
+				97CBFA151F8CC3FC008C79DC /* HNCommentsViewController.swift */,
+			);
+			name = HN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,27 +207,6 @@
 			productReference = 607FACD01AFB9204008FA782 /* SwiftyComments_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* SwiftyComments_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftyComments_Tests" */;
-			buildPhases = (
-				5F5061EFDB57529FD7BA6B98 /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-				7922E770CD01024F82A66250 /* [CP] Embed Pods Frameworks */,
-				EA147C653F18CD43E25B256E /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
-			);
-			name = SwiftyComments_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* SwiftyComments_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -216,11 +220,6 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
-					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -238,7 +237,6 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* SwiftyComments_Example */,
-				607FACE41AFB9204008FA782 /* SwiftyComments_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,16 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE31AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,48 +279,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftScanner/SwiftScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyComments/SwiftyComments.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyComments.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5F5061EFDB57529FD7BA6B98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftyComments_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7922E770CD01024F82A66250 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Tests/Pods-SwiftyComments_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ABEFACA7888426DC61276D9E /* [CP] Copy Pods Resources */ = {
@@ -348,21 +307,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA147C653F18CD43E25B256E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Tests/Pods-SwiftyComments_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,38 +314,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979B78731F8BA56F00572186 /* SimpleCommentsViewController.swift in Sources */,
+				97CBFA161F8CC3FC008C79DC /* HNCommentsViewController.swift in Sources */,
+				979B787E1F8BA95E00572186 /* RedditCommentCell.swift in Sources */,
+				979B78791F8BA66F00572186 /* LoremSwiftum.swift in Sources */,
+				979B78821F8BAA1200572186 /* ImgurCommentsViewController.swift in Sources */,
+				97CBFA191F8CC50B008C79DC /* HNCommentCell.swift in Sources */,
+				979B786F1F8BA31300572186 /* DemosTableViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				979B78741F8BA56F00572186 /* SimpleCommentCell.swift in Sources */,
+				979B78771F8BA66000572186 /* MockupData.swift in Sources */,
+				97CBFA141F8CC3F5008C79DC /* HNCommentContentParser.swift in Sources */,
+				979B78831F8BAA1200572186 /* ImgurCommentCell.swift in Sources */,
+				979B787D1F8BA95E00572186 /* RedditCommentsViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE11AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* SwiftyComments_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -542,44 +474,6 @@
 			};
 			name = Release;
 		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7BDDEA2AF8C9A149FC7038B /* Pods-SwiftyComments_Tests.debug.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		607FACF41AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C8F0BFE685D026D5C3115C7 /* Pods-SwiftyComments_Tests.release.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -597,15 +491,6 @@
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
 				607FACF11AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftyComments_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

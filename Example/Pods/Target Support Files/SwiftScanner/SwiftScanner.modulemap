@@ -1,0 +1,6 @@
+framework module SwiftScanner {
+  umbrella header "SwiftScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

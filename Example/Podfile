@@ -2,10 +2,6 @@ use_frameworks!
 
 target 'SwiftyComments_Example' do
   pod 'SwiftyComments', :path => '../'
-
-  target 'SwiftyComments_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'SwiftScanner', '~> 1.0.2'
+  
 end
