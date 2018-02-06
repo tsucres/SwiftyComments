@@ -1,4 +1,17 @@
+
+
 # SwiftyComments
+
+
+<p align="center">
+    <a href="https://travis-ci.org/tsucres/SwiftyComments">
+      <img src="https://img.shields.io/travis/tsucres/SwiftyComments.svg">
+    </a>
+    <img src="https://img.shields.io/badge/Swift-3.0-orange.svg" />
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" />
+    </a>
+</p>
 
 
 UITableView based component designed to display a hierarchy of expandable/foldable comments.
