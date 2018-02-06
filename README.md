@@ -44,19 +44,19 @@ A `CommentCell` is basically 1 UIView showing your comment + an indentation. Her
 ```swift
 class YourCommentCell: CommentCell {
     
-	    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-			super.init(style: style, reuseIdentifier: reuseIdentifier)
-			
-			// YourCommentView is a UIView aimed to contain all the info about a comment (poster's name, date, body, ...)
-			self.commentViewContent = YourCommentView()
-        	
-        	// Customisation...
-			// ...
-    	}
-		required init?(coder aDecoder: NSCoder) {
-			fatalError("init(coder:) has not been implemented")
-    	}
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+		super.init(style: style, reuseIdentifier: reuseIdentifier)
+		
+		// YourCommentView is a UIView aimed to contain all the info about a comment (poster's name, date, body, ...)
+		self.commentViewContent = YourCommentView()
+    	
+    	// Customisation...
+		// ...
 	}
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+}
 
 ```
 
@@ -88,7 +88,7 @@ The suroundings of your comment view (such as the indentation, the margins) are 
 
 ##### 3) Load the data
 
-The `CommentsViewController` class inherits from `UITableViewController` and takes care of loading your cells. All you have to do is fill the `` property with your models and override the `tableView(_:cellForRowAt:)' method: 
+The `CommentsViewController` class inherits from `UITableViewController` and takes care of loading your cells. All you have to do is fill the `allComments` property with your models and override the `tableView(_:cellForRowAt:)` method: 
 
 
 ```swift
@@ -124,6 +124,8 @@ public protocol AbstractComment: class {
     weak var replyTo: AbstractComment? { get set }
 }
 ```
+
+By default, when a comment is expanded, the tableView will scroll to make the replies visible. You can turn this feature off throught the property `makeExpandedCellsVisible`.
 
 ### Overall structure of the tableview
 

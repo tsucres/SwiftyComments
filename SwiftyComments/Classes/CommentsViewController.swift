@@ -14,6 +14,9 @@ open class CommentsViewController: UITableViewController {
     /// The list of comments correctly displayed in the tableView (in linearized form)
     open var currentlyDisplayed: [AbstractComment] = []
     
+    /// If true, when a cell is expanded, the tableView will scroll to make the new cells visible
+    open var makeExpandedCellsVisible: Bool = true
+    
     deinit {
         //print("CommentsVC deinited!")
     }
@@ -92,6 +95,10 @@ open class CommentsViewController: UITableViewController {
                     indexPaths.append(IndexPath(row: selectedIndex+i+1, section: indexPath.section))
                 }
                 tableView.insertRows(at: indexPaths, with: .top)
+                
+                if makeExpandedCellsVisible {
+                    tableView.scrollToRow(at: IndexPath(row: selectedIndex+1, section: indexPath.section), at: UITableViewScrollPosition.middle, animated: false)
+                }
             }
         }
     }

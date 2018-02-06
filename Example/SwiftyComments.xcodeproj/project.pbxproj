@@ -219,6 +219,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5P2WT92MAV;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -449,6 +450,7 @@
 			baseConfigurationReference = 9B24187D6EE6E1D933C760BD /* Pods-SwiftyComments_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P2WT92MAV;
 				INFOPLIST_FILE = SwiftyComments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -464,6 +466,7 @@
 			baseConfigurationReference = 1CC498939563D62229064CAC /* Pods-SwiftyComments_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P2WT92MAV;
 				INFOPLIST_FILE = SwiftyComments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
