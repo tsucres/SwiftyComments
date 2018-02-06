@@ -10,7 +10,9 @@ import UIKit
 
 class DemosTableViewController: UITableViewController {
     private let demoNames = ["Basic", "Imgur", "Reddit", "Hackernews"]
-    private let controllers = [SimpleCommentsViewController(), ImgurCommentsViewController(), RedditCommentsViewController(), HNCommentsViewController()]
+    
+    private let controllerClasses = [SimpleCommentsViewController.self, ImgurCommentsViewController.self, RedditCommentsViewController.self, HNCommentsViewController.self]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,11 +24,11 @@ class DemosTableViewController: UITableViewController {
         UIApplication.shared.statusBarStyle = .default
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController!.pushViewController(controllers[indexPath.row], animated: true)
+        self.navigationController!.pushViewController(controllerClasses[indexPath.row].init(), animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return controllers.count
+        return controllerClasses.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

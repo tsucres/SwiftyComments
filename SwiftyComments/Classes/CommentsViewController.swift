@@ -14,6 +14,9 @@ open class CommentsViewController: UITableViewController {
     /// The list of comments correctly displayed in the tableView (in linearized form)
     open var currentlyDisplayed: [AbstractComment] = []
     
+    deinit {
+        //print("CommentsVC deinited!")
+    }
     override open func viewDidLoad() {
         super.viewDidLoad()
         
