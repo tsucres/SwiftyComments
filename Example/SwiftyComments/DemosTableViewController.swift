@@ -9,9 +9,9 @@
 import UIKit
 
 class DemosTableViewController: UITableViewController {
-    private let demoNames = ["Basic", "Imgur", "Reddit", "Hackernews"]
+    private let demoNames = ["Basic", "Imgur", "Reddit", "Hackernews", "Imgur - Full expanded"]
     
-    private let controllerClasses = [SimpleCommentsViewController.self, ImgurCommentsViewController.self, RedditCommentsViewController.self, HNCommentsViewController.self]
+    private let controllerClasses = [SimpleCommentsViewController.self, ImgurCommentsViewController.self, RedditCommentsViewController.self, HNCommentsViewController.self, FullyExpandedImgurVC.self]
     
     override func viewDidLoad() {
         super.viewDidLoad()

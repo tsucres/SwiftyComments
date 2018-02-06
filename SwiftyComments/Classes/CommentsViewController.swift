@@ -12,11 +12,29 @@ import UIKit
 open class CommentsViewController: UITableViewController {
     
     /// The list of comments correctly displayed in the tableView (in linearized form)
-    open var currentlyDisplayed: [AbstractComment] = []
+    var _currentlyDisplayed: [AbstractComment] = []
+    open var currentlyDisplayed: [AbstractComment] {
+        get {
+            return _currentlyDisplayed
+        } set(value) {
+            if fullyExpanded {
+                linearizeComments(comments: value, linearizedComments: &_currentlyDisplayed)
+            } else {
+                _currentlyDisplayed = value
+            }
+        }
+    }
     
     /// If true, when a cell is expanded, the tableView will scroll to make the new cells visible
     open var makeExpandedCellsVisible: Bool = true
     
+    open var fullyExpanded: Bool = false {
+        didSet {
+            if fullyExpanded {
+                self.linearizeCurrentlyDisplayedComs()
+            }
+        }
+    }
     deinit {
         //print("CommentsVC deinited!")
     }
@@ -25,9 +43,7 @@ open class CommentsViewController: UITableViewController {
         
         // Tableview stye
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
-        
-        
-        
+
         if #available(iOS 11.0, *) {
             tableView.estimatedRowHeight = 0
             tableView.estimatedSectionFooterHeight = 0
@@ -57,6 +73,12 @@ open class CommentsViewController: UITableViewController {
         }
     }
     
+    public func linearizeCurrentlyDisplayedComs() {
+        var linearizedComs: [AbstractComment] = []
+        linearizeComments(comments: _currentlyDisplayed, linearizedComments: &linearizedComs)
+        _currentlyDisplayed = linearizedComs
+    }
+    
     override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentlyDisplayed.count
     }
@@ -69,19 +91,19 @@ open class CommentsViewController: UITableViewController {
     }
     
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCom: AbstractComment = currentlyDisplayed[indexPath.row]
+        let selectedCom: AbstractComment = _currentlyDisplayed[indexPath.row]
         let selectedIndex = indexPath.row
         
         if selectedCom.replies.count > 0 { // if expandable
-            if currentlyDisplayed.count > selectedIndex+1 &&  // if not last cell
-                currentlyDisplayed[selectedIndex+1].level > selectedCom.level { // if replies are displayed
+            if _currentlyDisplayed.count > selectedIndex+1 &&  // if not last cell
+                _currentlyDisplayed[selectedIndex+1].level > selectedCom.level { // if replies are displayed
                 // collapse
                 var nCellsToDelete = 0
                 repeat {
                     nCellsToDelete += 1
-                } while (currentlyDisplayed.count > selectedIndex+nCellsToDelete+1 && currentlyDisplayed[selectedIndex+nCellsToDelete+1].level > selectedCom.level)
+                } while (_currentlyDisplayed.count > selectedIndex+nCellsToDelete+1 && _currentlyDisplayed[selectedIndex+nCellsToDelete+1].level > selectedCom.level)
                 
-                currentlyDisplayed.removeSubrange(Range(uncheckedBounds: (lower: selectedIndex+1 , upper: selectedIndex+nCellsToDelete+1)))
+                _currentlyDisplayed.removeSubrange(Range(uncheckedBounds: (lower: selectedIndex+1 , upper: selectedIndex+nCellsToDelete+1)))
                 var indexPaths: [IndexPath] = []
                 for i in 0..<nCellsToDelete {
                     indexPaths.append(IndexPath(row: selectedIndex+i+1, section: indexPath.section))
@@ -89,7 +111,7 @@ open class CommentsViewController: UITableViewController {
                 tableView.deleteRows(at: indexPaths, with: .top)
             } else {
                 // expand
-                currentlyDisplayed.insert(contentsOf: selectedCom.replies, at: selectedIndex+1)
+                _currentlyDisplayed.insert(contentsOf: selectedCom.replies, at: selectedIndex+1)
                 var indexPaths: [IndexPath] = []
                 for i in 0..<selectedCom.replies.count {
                     indexPaths.append(IndexPath(row: selectedIndex+i+1, section: indexPath.section))

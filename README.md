@@ -125,7 +125,10 @@ public protocol AbstractComment: class {
 }
 ```
 
+
 By default, when a comment is expanded, the tableView will scroll to make the replies visible. You can turn this feature off throught the property `makeExpandedCellsVisible`.
+
+Additionnally, you can start with a fully-expanded tableView by setting the `fullyExpanded` property to `true`.
 
 ### Overall structure of the tableview
 
@@ -172,7 +175,6 @@ There are four different implementations of the `CommentsViewController ` in thi
 
 ## TODO
 
-- option to fully expand by default
 - More abstraction on top of the tableview: 
 	- getting rid of the `init(style: UITableViewCellStyle, reuseIdentifier: String?)`
 	- override the `func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CommentCell`

@@ -9,6 +9,12 @@
 import UIKit
 import SwiftyComments
 
+class FullyExpandedImgurVC: ImgurCommentsViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.fullyExpanded = true
+    }
+}
 class ImgurCommentsViewController: CommentsViewController {
     private let commentCellId = "imgurComentCellId"
     var allComments: [RichComment] = [] // All the comments (nested, not in a linear format)
