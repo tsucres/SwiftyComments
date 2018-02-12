@@ -35,6 +35,9 @@ open class CommentsViewController: UITableViewController {
             }
         }
     }
+    
+    open weak var delegate: CommentsViewDelegate? = nil
+    
     deinit {
         //print("CommentsVC deinited!")
     }
@@ -109,11 +112,18 @@ open class CommentsViewController: UITableViewController {
                     indexPaths.append(IndexPath(row: selectedIndex+i+1, section: indexPath.section))
                 }
                 tableView.deleteRows(at: indexPaths, with: .top)
+                delegate?.commentCellFolded(atIndex: selectedIndex)
             } else {
                 // expand
-                _currentlyDisplayed.insert(contentsOf: selectedCom.replies, at: selectedIndex+1)
+                var toShow: [AbstractComment] = []
+                if fullyExpanded {
+                    linearizeComments(comments: selectedCom.replies, linearizedComments: &toShow)
+                } else {
+                    toShow = selectedCom.replies
+                }
+                _currentlyDisplayed.insert(contentsOf: toShow, at: selectedIndex+1)
                 var indexPaths: [IndexPath] = []
-                for i in 0..<selectedCom.replies.count {
+                for i in 0..<toShow.count {
                     indexPaths.append(IndexPath(row: selectedIndex+i+1, section: indexPath.section))
                 }
                 tableView.insertRows(at: indexPaths, with: .top)
@@ -121,6 +131,7 @@ open class CommentsViewController: UITableViewController {
                 if makeExpandedCellsVisible {
                     tableView.scrollToRow(at: IndexPath(row: selectedIndex+1, section: indexPath.section), at: UITableViewScrollPosition.middle, animated: false)
                 }
+                delegate?.commentCellExpanded(atIndex: selectedIndex)
             }
         }
     }

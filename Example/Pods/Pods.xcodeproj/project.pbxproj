@@ -14,6 +14,7 @@
 		832E96E0414A02680F25F0517916D825 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6591C02B71581B070E59C19AAAEA8F /* CommentsViewController.swift */; };
 		87AB83CDE73C4DF0E517C480D679F9B6 /* SwiftyComments-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE88E9E4F4A65381CE0B8436353062B /* SwiftyComments-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		924055E2E841CADECA3B3DC915068D36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		97C77746203219FD009E0736 /* CommentsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C77745203219FD009E0736 /* CommentsViewDelegate.swift */; };
 		9E22C1B8A4F91398FFF36A456E8D5863 /* Pods-SwiftyComments_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CD3405488C45EDCDD6AFBEF6C0355 /* Pods-SwiftyComments_Example-dummy.m */; };
 		A0D7B04D7945585F29F766D1BD4C3DA2 /* Pods-SwiftyComments_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1D44BC8220B98011CF314A1C3074E4 /* Pods-SwiftyComments_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2A00C09ECD4846E530C5264E399061F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -41,7 +42,7 @@
 
 /* Begin PBXFileReference section */
 		08A817F11BDF7B4143F0F48498762ADF /* SwiftScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftScanner.xcconfig; sourceTree = "<group>"; };
-		093F7ECF9D23233C842C70E5EA4442C0 /* SwiftScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftScanner.framework; path = SwiftScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		093F7ECF9D23233C842C70E5EA4442C0 /* SwiftScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2848D4CF4D23602845CFCC1FD6C4AB71 /* StringScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringScanner.swift; path = Sources/StringScanner.swift; sourceTree = "<group>"; };
 		2BAFE020D8C3A7B645EBA11F9FFAF7C5 /* Pods-SwiftyComments_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyComments_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2BF4AA71574BE18BD53543374399AF2E /* SwiftScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftScanner-dummy.m"; sourceTree = "<group>"; };
@@ -50,7 +51,7 @@
 		3C2BDDD089AB3B36E1BD88EB3C31B5F8 /* SwiftyComments.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyComments.xcconfig; sourceTree = "<group>"; };
 		3C3A9A8EFCC587334F4C9C82B1AC611D /* SwiftScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftScanner-prefix.pch"; sourceTree = "<group>"; };
 		3C71D98038487B9E6C880BBE9F0F3512 /* SwiftyComments-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-prefix.pch"; sourceTree = "<group>"; };
-		43165FE32DCE32BE66341CD9701AE8F8 /* SwiftyComments.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyComments.modulemap; sourceTree = "<group>"; };
+		43165FE32DCE32BE66341CD9701AE8F8 /* SwiftyComments.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyComments.modulemap; sourceTree = "<group>"; };
 		4AE88E9E4F4A65381CE0B8436353062B /* SwiftyComments-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-umbrella.h"; sourceTree = "<group>"; };
 		5D1CD3405488C45EDCDD6AFBEF6C0355 /* Pods-SwiftyComments_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyComments_Example-dummy.m"; sourceTree = "<group>"; };
 		63A6DAAE9EA13A62ED852C90BB74CD1B /* AbstractComment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractComment.swift; path = SwiftyComments/Classes/AbstractComment.swift; sourceTree = "<group>"; };
@@ -58,18 +59,19 @@
 		6EB00B967439EB8F2160B52F39B072DA /* Pods-SwiftyComments_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyComments_Example-resources.sh"; sourceTree = "<group>"; };
 		6F1D44BC8220B98011CF314A1C3074E4 /* Pods-SwiftyComments_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyComments_Example-umbrella.h"; sourceTree = "<group>"; };
 		738413AABEACB5929EF38F04026B2448 /* Pods-SwiftyComments_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyComments_Example.release.xcconfig"; sourceTree = "<group>"; };
-		73B17AF157D3F6444DDEADEABF036B3D /* SwiftScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftScanner.modulemap; sourceTree = "<group>"; };
+		73B17AF157D3F6444DDEADEABF036B3D /* SwiftScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftScanner.modulemap; sourceTree = "<group>"; };
 		7C1F48DE8F4D56DC3C7211A6E2D28106 /* Pods-SwiftyComments_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyComments_Example-frameworks.sh"; sourceTree = "<group>"; };
 		90E13D7A4F2F43FC2786AC322C5F0B7F /* SwiftScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftScanner-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95E380B53C747626BDD52229C87928BD /* SwiftyComments-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyComments-dummy.m"; sourceTree = "<group>"; };
+		97C77745203219FD009E0736 /* CommentsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommentsViewDelegate.swift; path = SwiftyComments/Classes/CommentsViewDelegate.swift; sourceTree = "<group>"; };
 		AF255F4651E2EFA02830B2E534F6A291 /* Pods-SwiftyComments_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyComments_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B4B67019A974DA971DF1D05BC51507A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE47C81A061A4CFA5A237537069713F6 /* Pods_SwiftyComments_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftyComments_Example.framework; path = "Pods-SwiftyComments_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE47C81A061A4CFA5A237537069713F6 /* Pods_SwiftyComments_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyComments_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4A92829532CEA70D2FEA1CF5372B1F /* Pods-SwiftyComments_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyComments_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C43C6517CECC5C8CF7AA0452DCA74525 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C98B89E3EF986BC5805BDB0FD569BCE3 /* SwiftyComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyComments.framework; path = SwiftyComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB98CD8ED9E9988B74260611838CF669 /* Pods-SwiftyComments_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftyComments_Example.modulemap"; sourceTree = "<group>"; };
+		C98B89E3EF986BC5805BDB0FD569BCE3 /* SwiftyComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB98CD8ED9E9988B74260611838CF669 /* Pods-SwiftyComments_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftyComments_Example.modulemap"; sourceTree = "<group>"; };
 		E44FFFC5FF844C5492A15E49F5D52F7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				63A6DAAE9EA13A62ED852C90BB74CD1B /* AbstractComment.swift */,
 				2E79C6D365AB3CB5E625292A96BFE663 /* CommentCell.swift */,
 				2E6591C02B71581B070E59C19AAAEA8F /* CommentsViewController.swift */,
+				97C77745203219FD009E0736 /* CommentsViewDelegate.swift */,
 				5D347DC40BAB06E393865EEB3C4CE7C3 /* Support Files */,
 			);
 			name = SwiftyComments;
@@ -217,7 +220,6 @@
 				2848D4CF4D23602845CFCC1FD6C4AB71 /* StringScanner.swift */,
 				7C31C6899DED381D90BD9E430842EBD7 /* Support Files */,
 			);
-			name = SwiftScanner;
 			path = SwiftScanner;
 			sourceTree = "<group>";
 		};
@@ -349,6 +351,7 @@
 			files = (
 				BC501FEBF9CFDF1207597D142ED1699F /* AbstractComment.swift in Sources */,
 				3865C20FC806D4C8CE9385F8230F598E /* CommentCell.swift in Sources */,
+				97C77746203219FD009E0736 /* CommentsViewDelegate.swift in Sources */,
 				832E96E0414A02680F25F0517916D825 /* CommentsViewController.swift in Sources */,
 				1DBB245CDD6D60C5DE71EFE162B8209F /* SwiftyComments-dummy.m in Sources */,
 			);

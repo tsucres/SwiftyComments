@@ -32,7 +32,7 @@ Add the following line to your Podfile:
 
 
 ```ruby
-pod 'SwiftyComments', :git => 'https://github.com/tsucres/HeaderedTabScrollView.git'
+pod 'SwiftyComments', :git => 'https://github.com/tsucres/SwiftyComments.git'
 ```
 
 ## Usage
@@ -147,7 +147,7 @@ Additionnally, you can start with a fully-expanded tableView by setting the `ful
 
 The following image shows the structure of the tableView:
 
-![dd](Screenshots/schema_small.png)
+![schema_small](Screenshots/schema_small.png)
 
 - **`1`** shows the whole `CommentCell`
 - **`2`** is the `UIView` assigned to the `commentViewContent` property of the cell
@@ -174,6 +174,21 @@ If you don't trust me, go in the [`HNCommentsViewController.swift`](Example/Swif
 
 The example makes use of [SwiftScanner](https://github.com/malcommac/SwiftScanner) to parse the html of the hackernews comments. Check the [`HNCommentContentParser.swift`](Example/SwiftyComments/HNCommentContentParser.swift) file for more details on how the AttributedStrings are built.
 
+### CommentsViewDelegate
+
+```swift
+public protocol CommentsViewDelegate: class {
+    func commentCellExpanded(atIndex index: Int)
+    func commentCellFolded(atIndex index: Int)
+}
+```
+
+You can implement this protocol and correctly set the `delegate` attribute of `CommentsViewController` to be notified when a cell is expanded/folded.
+
+You can use this to, for example, minimize a comment when it has been folded. Check out the `RedditCommentsViewController` example for more details:
+
+<!-- TODO: Add gif here -->
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory.
@@ -191,7 +206,10 @@ There are four different implementations of the `CommentsViewController ` in thi
 - More abstraction on top of the tableview: 
 	- getting rid of the `init(style: UITableViewCellStyle, reuseIdentifier: String?)`
 	- override the `func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CommentCell`
-- The add/delete rows in iOS 11 is a bit weird.. any solution?
+- The animation for adding/deleting rows in iOS 11 is a bit weird.. any solution?
+- mark comments as expanded/folded so that, when expanding a comment, the state (expanded/folded) of its replies is maintained. Currently, when a comment having folded replies is folded and then unfolded, its replies are beeing unfolded too.
+- Better documentation/README
+
 
 ## License
 

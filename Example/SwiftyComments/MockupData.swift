@@ -87,7 +87,7 @@ class RichComment: BaseComment {
     var postedDate: Double? // epochtime (since 1970)
     var upvoted: Bool = false
     var downvoted: Bool = false
-    
+    var isFolded: Bool = false
     
     /**
      Express the postedDate in following format: "[x] [time period] ago"

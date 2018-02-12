@@ -24,7 +24,7 @@ class RedditCommentCell: CommentCell {
             return self.commentViewContent as! RedditCommentView
         }
     }
-    open var commentContent: String! = "content" {
+    open var commentContent: String! = "content" { // TODO: transform to get/set
         didSet {
             self.content.commentContent = commentContent
         }
@@ -44,6 +44,13 @@ class RedditCommentCell: CommentCell {
             self.content.upvotes = upvotes
         }
     }
+    open var isFolded: Bool {
+        get {
+            return self.content.isFolded
+        } set(value) {
+            self.content.isFolded = value
+        }
+    }
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commentViewContent = RedditCommentView()
@@ -56,6 +63,7 @@ class RedditCommentCell: CommentCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }
 
 class RedditCommentView: UIView {
@@ -79,6 +87,15 @@ class RedditCommentView: UIView {
             self.upvotesLabel.text = "\(self.upvotes!)"
         }
     }
+    open var isFolded: Bool! = false {
+        didSet {
+            if isFolded {
+                fold()
+            } else {
+                unfold()
+            }
+        }
+    }
     private func updateUsernameLabel() {
         posterLabel.text = "\(self.posterName!) • \(self.date!)"
     }
@@ -87,10 +104,24 @@ class RedditCommentView: UIView {
         super.init(frame: frame)
         setLayout()
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    private func fold() {
+        contentHeightConstraint?.isActive = true
+        controlBarHeightConstraint?.isActive = true
+        controlView.isHidden = true
+    }
+    private func unfold() {
+        contentHeightConstraint?.isActive = false
+        controlBarHeightConstraint?.isActive = false
+        controlView.isHidden = false
+    }
+    private var contentHeightConstraint: NSLayoutConstraint?
+    private var controlBarHeightConstraint: NSLayoutConstraint?
+    
+    
     private func setLayout() {
         addSubview(posterLabel)
         posterLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -102,7 +133,7 @@ class RedditCommentView: UIView {
         contentLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         contentLabel.topAnchor.constraint(equalTo: posterLabel.bottomAnchor).isActive = true
-        
+        contentHeightConstraint = contentLabel.heightAnchor.constraint(equalToConstant: 0)
         setupControlView()
         
         addSubview(controlView)
@@ -110,6 +141,7 @@ class RedditCommentView: UIView {
         controlView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         controlView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor).isActive = true
         controlView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        controlBarHeightConstraint = controlView.heightAnchor.constraint(equalToConstant: 0)
     }
     
 
