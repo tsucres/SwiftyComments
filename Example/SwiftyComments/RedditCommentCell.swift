@@ -24,24 +24,32 @@ class RedditCommentCell: CommentCell {
             return self.commentViewContent as! RedditCommentView
         }
     }
-    open var commentContent: String! = "content" { // TODO: transform to get/set
-        didSet {
-            self.content.commentContent = commentContent
+    open var commentContent: String! {
+        get {
+            return self.content.commentContent
+        } set(value) {
+            self.content.commentContent = value
         }
     }
-    open var posterName: String! = "username" {
-        didSet {
-            self.content.posterName = posterName
+    open var posterName: String! {
+        get {
+            return self.content.posterName
+        } set(value) {
+            self.content.posterName = value
         }
     }
-    open var date: String! = "" {
-        didSet {
-            self.content.date = date
+    open var date: String! {
+        get {
+            return self.content.date
+        } set(value) {
+            self.content.date = value
         }
     }
-    open var upvotes: Int! = 42 {
-        didSet {
-            self.content.upvotes = upvotes
+    open var upvotes: Int! {
+        get {
+            return self.content.upvotes
+        } set(value) {
+            self.content.upvotes = value
         }
     }
     open var isFolded: Bool {
@@ -246,8 +254,5 @@ class RedditCommentView: UIView {
         lbl.textAlignment = .left
         return lbl
     }()
-    
-    
-    
     
 }

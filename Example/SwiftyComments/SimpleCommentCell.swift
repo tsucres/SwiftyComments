@@ -20,9 +20,11 @@ class SimpleCommentCell: CommentCell {
             (self.commentViewContent as! SimpleCommentView).commentContent = commentContent
         }
     }
-    open var posterName: String! = "username" {
-        didSet {
-            self.content.posterName = posterName
+    open var posterName: String! {
+        get {
+            return self.content.posterName
+        } set(value) {
+            self.content.posterName = value
         }
     }
     

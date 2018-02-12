@@ -25,28 +25,38 @@ class HNCommentCell: CommentCell {
         }
     }
     open var commentContentAttributed: NSAttributedString? {
-        didSet {
-            self.content.body = commentContentAttributed
+        get {
+            return self.content.body
+        } set(value) {
+            self.content.body = value
         }
     }
-    open var posterName: String! = "username" {
-        didSet {
-            self.content.posterName = posterName
+    open var posterName: String! {
+        get {
+            return self.content.posterName
+        } set(value) {
+            self.content.posterName = value
         }
     }
-    open var date: String! = "0 hour ago" {
-        didSet {
-            self.content.date = date
+    open var date: String! {
+        get {
+            return self.content.date
+        } set(value) {
+            self.content.date = value
         }
     }
-    open var nReplies: Int! = 0 {
-        didSet {
-            self.content.nReplies = nReplies
+    open var nReplies: Int! {
+        get {
+            return self.content.nReplies
+        } set(value) {
+            self.content.nReplies = value
         }
     }
-    open var upvoted: Bool = false {
-        didSet {
-            self.content.upvoted = upvoted
+    open var upvoted: Bool {
+        get {
+            return self.content.upvoted
+        } set(value) {
+            self.content.upvoted = value
         }
     }
     

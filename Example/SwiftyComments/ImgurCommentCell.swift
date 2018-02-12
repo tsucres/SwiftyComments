@@ -31,34 +31,46 @@ class ImgurCommentCell: CommentCell {
             return self.commentViewContent as! ImgurCommentView
         }
     }
-    open var commentContent: String! = "content" {
-        didSet {
-            self.content.commentContent = commentContent
+    open var commentContent: String! {
+        get {
+            return self.content.commentContent
+        } set(value) {
+            self.content.commentContent = value
         }
     }
-    open var posterName: String! = "username" {
-        didSet {
-            self.content.posterName = posterName
+    open var posterName: String! {
+        get {
+            return self.content.posterName
+        } set(value) {
+            self.content.posterName = value
         }
     }
-    open var date: String! = "" {
-        didSet {
-            self.content.date = date
+    open var date: String! {
+        get {
+            return self.content.date
+        } set(value) {
+            self.content.date = value
         }
     }
-    open var upvotes: Int! = 0 {
-        didSet {
-            self.content.upvotes = upvotes
+    open var upvotes: Int! {
+        get {
+            return self.content.upvotes
+        } set(value) {
+            self.content.upvotes = value
         }
     }
-    open var downvotes: Int! = 0 {
-        didSet {
-            self.content.downvotes = downvotes
+    open var downvotes: Int! {
+        get {
+            return self.content.downvotes
+        } set(value) {
+            self.content.downvotes = value
         }
     }
-    open var nReplies: Int! = 0 {
-        didSet {
-            self.content.nReplies = nReplies
+    open var nReplies: Int! {
+        get {
+            return self.content.nReplies
+        } set(value) {
+            self.content.nReplies = value
         }
     }
     open var upvoted: Bool = false {
