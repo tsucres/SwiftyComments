@@ -28,6 +28,10 @@ open class CommentsViewController: UITableViewController {
     /// If true, when a cell is expanded, the tableView will scroll to make the new cells visible
     open var makeExpandedCellsVisible: Bool = true
     
+    
+    open var swipeToHide: Bool = true
+    
+    
     open var fullyExpanded: Bool = false {
         didSet {
             if fullyExpanded {
@@ -98,8 +102,7 @@ open class CommentsViewController: UITableViewController {
         let selectedIndex = indexPath.row
         
         if selectedCom.replies.count > 0 { // if expandable
-            if _currentlyDisplayed.count > selectedIndex+1 &&  // if not last cell
-                _currentlyDisplayed[selectedIndex+1].level > selectedCom.level { // if replies are displayed
+            if isCellExpanded(indexPath: indexPath) {
                 // collapse
                 var nCellsToDelete = 0
                 repeat {
@@ -111,7 +114,7 @@ open class CommentsViewController: UITableViewController {
                 for i in 0..<nCellsToDelete {
                     indexPaths.append(IndexPath(row: selectedIndex+i+1, section: indexPath.section))
                 }
-                tableView.deleteRows(at: indexPaths, with: .top)
+                tableView.deleteRows(at: indexPaths, with: .bottom)
                 delegate?.commentCellFolded(atIndex: selectedIndex)
             } else {
                 // expand
@@ -126,7 +129,7 @@ open class CommentsViewController: UITableViewController {
                 for i in 0..<toShow.count {
                     indexPaths.append(IndexPath(row: selectedIndex+i+1, section: indexPath.section))
                 }
-                tableView.insertRows(at: indexPaths, with: .top)
+                tableView.insertRows(at: indexPaths, with: .bottom)
                 
                 if makeExpandedCellsVisible {
                     tableView.scrollToRow(at: IndexPath(row: selectedIndex+1, section: indexPath.section), at: UITableViewScrollPosition.middle, animated: false)
@@ -134,5 +137,27 @@ open class CommentsViewController: UITableViewController {
                 delegate?.commentCellExpanded(atIndex: selectedIndex)
             }
         }
+    }
+    
+    open func isCellExpanded(indexPath: IndexPath) -> Bool {
+        let com: AbstractComment = _currentlyDisplayed[indexPath.row]
+        return _currentlyDisplayed.count > indexPath.row+1 &&  // if not last cell
+            _currentlyDisplayed[indexPath.row+1].level > com.level // if replies are displayed
+    }
+    
+    
+    open override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return swipeToHide && isCellExpanded(indexPath: indexPath)
+    }
+    
+    open override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let foldAction = UITableViewRowAction(style: .destructive, title: "Hide") { [weak self](action, indexPath) in
+            if self != nil {
+                self!.tableView(self!.tableView, didSelectRowAt: indexPath)
+            }
+        }
+        foldAction.backgroundColor = #colorLiteral(red: 0.4147516489, green: 0.8618777394, blue: 0.8051461577, alpha: 1)
+        
+        return [foldAction]
     }
 }
