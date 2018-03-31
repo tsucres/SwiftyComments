@@ -26,10 +26,10 @@ class HNCommentContentParser {
         attributedText.addAttributes([.font: font,
                                       .foregroundColor: textColor,
                                       NSAttributedStringKey.paragraphStyle: paragraphStyle
-            ], range: NSRange.init(location: 0, length: text.characters.count))
+            ], range: NSRange.init(location: 0, length: text.count))
         for tag in tags {
             if tag.name == "a" {
-                let initialLen = text.characters.count
+                let initialLen = text.count
                 var aContent = String(text.dropFirst(tag.range!.lowerBound))
                 aContent = String(aContent.dropLast(initialLen - tag.range!.upperBound))
                 let attributes: [NSAttributedStringKey: Any] = [.link: aContent, .underlineStyle: NSUnderlineStyle.styleSingle.rawValue, .foregroundColor: linkColor]
@@ -78,7 +78,7 @@ class HNCommentContentParser {
                             plainText += "\n"
                             continue
                         }
-                        let endIndex = plainText.characters.count
+                        let endIndex = plainText.count
                         if tag.isOpenTag == true {
                             // it's an open tag, store the start index
                             // (the upperbund is temporary the same of the lower bound, we will update it
@@ -131,7 +131,7 @@ class HNCommentContentParser {
                 if self.name == "a" {
                     let linkPattern = "href=\\\"(.*)\\\"" // #bestURLRegexEver
                     let linkRegex = try! NSRegularExpression(pattern: linkPattern, options: [])
-                    let matches = linkRegex.matches(in: content, options: [], range: NSRange(location: 0, length: content.characters.count))
+                    let matches = linkRegex.matches(in: content, options: [], range: NSRange(location: 0, length: content.count))
                     if matches.count > 0 {
                         let linkMatch = matches[0]
                         if linkMatch.numberOfRanges == 2 {

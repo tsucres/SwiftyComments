@@ -164,9 +164,8 @@ private extension Array {
 private extension String {
     
     var stringWithCapitalizedFirstLetter: String {
-        let firstLetterRange = startIndex..<characters.index(after: startIndex)
-        let capitalizedFirstLetter = substring(with: firstLetterRange).capitalized
-        return replacingCharacters(in: firstLetterRange, with: capitalizedFirstLetter)
+        let capitalizedFirstLetter = prefix(1).capitalized
+        return replacingCharacters(in: ..<index(startIndex, offsetBy: 1), with: capitalizedFirstLetter)
     }
     
 }
