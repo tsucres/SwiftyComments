@@ -7,305 +7,453 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		174D3AA849B1D7A07A03B69AED88DF7D /* SwiftScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4AA71574BE18BD53543374399AF2E /* SwiftScanner-dummy.m */; };
-		1DBB245CDD6D60C5DE71EFE162B8209F /* SwiftyComments-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E380B53C747626BDD52229C87928BD /* SwiftyComments-dummy.m */; };
-		2E361D24F91DD609FDAF1DCDD2F3E906 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3865C20FC806D4C8CE9385F8230F598E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E79C6D365AB3CB5E625292A96BFE663 /* CommentCell.swift */; };
-		832E96E0414A02680F25F0517916D825 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6591C02B71581B070E59C19AAAEA8F /* CommentsViewController.swift */; };
-		87AB83CDE73C4DF0E517C480D679F9B6 /* SwiftyComments-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE88E9E4F4A65381CE0B8436353062B /* SwiftyComments-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		924055E2E841CADECA3B3DC915068D36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		97C77746203219FD009E0736 /* CommentsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C77745203219FD009E0736 /* CommentsViewDelegate.swift */; };
-		9E22C1B8A4F91398FFF36A456E8D5863 /* Pods-SwiftyComments_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CD3405488C45EDCDD6AFBEF6C0355 /* Pods-SwiftyComments_Example-dummy.m */; };
-		A0D7B04D7945585F29F766D1BD4C3DA2 /* Pods-SwiftyComments_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1D44BC8220B98011CF314A1C3074E4 /* Pods-SwiftyComments_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2A00C09ECD4846E530C5264E399061F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BC501FEBF9CFDF1207597D142ED1699F /* AbstractComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A6DAAE9EA13A62ED852C90BB74CD1B /* AbstractComment.swift */; };
-		CFE2C513A029CAE9F06A72631BF96014 /* StringScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2848D4CF4D23602845CFCC1FD6C4AB71 /* StringScanner.swift */; };
-		D4CBC1FEBD4286ED93C44CA253AAE6CA /* SwiftScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E13D7A4F2F43FC2786AC322C5F0B7F /* SwiftScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		016B701798A2746091638A8508009B27 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9BC511315AD9D2588646226681D64 /* SwipeTableViewCellDelegate.swift */; };
+		027A7B774BA8FAB2CECC48F59B393A8E /* SwipeTableOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E5815023C7EF9B6D7038E2BC16CB0 /* SwipeTableOptions.swift */; };
+		0E94120D3A1BF66E8219A87BAF60411C /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398103CACE08F60DA15E964CB93B5191 /* SwipeFeedback.swift */; };
+		0F89EF7D8213B395E44B42FEB4436EFA /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24E51E0779169B930483C71F87F209C7 /* Media.xcassets */; };
+		10CF280338D9D032F130F88E54A6C5AA /* Pods-SwiftyComments_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD864DD0F411305ED11F61892AD5375 /* Pods-SwiftyComments_Example-dummy.m */; };
+		11E1A085191E4044A7B3563172AD67A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7CC609ABE95E0E25C4F1D6EDA803C3 /* UIKit.framework */; };
+		142AC601FAD99400931B6747608A5656 /* SwiftScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CF001A1D99FC1314C1D432DFE101B0 /* SwiftScanner-dummy.m */; };
+		1458C215E175816EB0714F7BC876028C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E9EF683F8E55A0B8F55E139EB51597 /* Foundation.framework */; };
+		1F0899F53288132E6783951EA9CC4ADE /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B488C40F1A158A4F4D5BCAB9F49611 /* SwipeCellKit.framework */; };
+		202EA0775444F54BF0DF8E7C5228AF17 /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8FA843591BC6C8A34EAE28A667B50 /* SwipeTableViewCell+Display.swift */; };
+		27DA99C2A64F37C56C9FFF1C8A863FB5 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11237BE25425FB067FEA09B33EB6BFAC /* Swipeable.swift */; };
+		35B38BF2E0390FBA2329AF8C0EB2428C /* SwiftScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E2B7B0C35AC639A505150EC491EB49 /* SwiftScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		420853D4C51C24ADBA8EC08CE9141D0F /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DAE851C530A1EEF2775BA1B1DBA55 /* SwipeAnimator.swift */; };
+		4671E53562BD7138CF1F63C1A56098E6 /* AbstractComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49F2EE1471BF5EC23714BCCAA69CD62 /* AbstractComment.swift */; };
+		4C6FB7EDEE19ED55DC1C7D98D226D1B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E9EF683F8E55A0B8F55E139EB51597 /* Foundation.framework */; };
+		4D2C6D7B0880CC1480125F52003ED830 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFCA7C547A79F9E4A0E164FEA6601F /* CommentsViewController.swift */; };
+		4D87EC2D8CF376F737CCBD6C89685CFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E9EF683F8E55A0B8F55E139EB51597 /* Foundation.framework */; };
+		5468FB2D586B383665D872AA7AE485DE /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25039EDC8373FD370CE63155F6DF0E /* SwipeTableViewCell.swift */; };
+		549E59359897A8DB82A8386EDFCC8134 /* SwiftyComments-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC817A0AA9F39BE0EFA554D4DC18448 /* SwiftyComments-dummy.m */; };
+		54AEFC4DE93BDD20366DC59977572ABF /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F6F85B0BF3AC2D8AF481A705C69DF /* SwipeCellKit-dummy.m */; };
+		6FA874347F783FB725A115953CC2052D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E9EF683F8E55A0B8F55E139EB51597 /* Foundation.framework */; };
+		8629E33970ECCE7A021056EE62AD1C6B /* SwiftyComments-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 494DC1597FA2C0A23F7911D44C4BE67C /* SwiftyComments-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B55CA0C52AF3DCEF908D027B89177BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8165ABBD8ADAC8D69CA15E30A65E19C /* Extensions.swift */; };
+		9D545E86333E8AAC74F3844CFA4307EC /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB51ACCD3BE601D633F8BF2A50FBED6 /* SwipeAction.swift */; };
+		A94B195AEDC5053E1251240D3F9A3D0D /* CommentsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB0F97DB9F885D6F71075C4D856F4C /* CommentsViewDelegate.swift */; };
+		AA5AF44E7909DD23767248364DB18910 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A11A59596AB72D8178A9E5E7742E55 /* SwipeActionsView.swift */; };
+		B51753674CFACA442CDDE748E40D9D8B /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAAD4C7B8BB4C465D9F1E7D55768BB0 /* SwipeExpanding.swift */; };
+		BB372C3776E302D7C2DF7E4FDAA76234 /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C219D5E469D7602D617E6CDD1ACF58B9 /* SwipeTransitionLayout.swift */; };
+		BF33D858FFD84F0B82A9FFAE70A0813E /* StringScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F2E0DFE8EBA7512EB9DAC2EBA6CD6A /* StringScanner.swift */; };
+		C17CE43FCCA52607E843906B6E0EB976 /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131F4DC10535E52B34E2AA6AE6EF9B02 /* SwipeActionTransitioning.swift */; };
+		C70D4345E45413C25B1C720D2A5A3D24 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288E2224F5D892B1DAC3CB5E105724E /* SwipeExpansionStyle.swift */; };
+		CA406074BC62C08686E4077879ECB567 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09756546509FF47888777421A60419D4 /* SwipeTableViewCell+Accessibility.swift */; };
+		CA9218E85F16DE0232F40FAA7FFAB4FF /* Pods-SwiftyComments_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1438CC164E1450739087C06DFD0CA5B8 /* Pods-SwiftyComments_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E99F527B8EA65D1C464C620A2524B534 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51A542F905164ED3D3DD7367AFE545F /* CommentCell.swift */; };
+		F710CCDDA0C2DBF1238FB9209B90AB9C /* SwipeCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A87DC5B163A6343D9CA6B55B7DC42CEC /* SwipeCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC99F224B2336AF0977EC457B06A0AF9 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCCF126B4FDB07594374D58F316DCBE /* SwipeActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D82437022A9FB2C9402C4A0753CAAC27 /* PBXContainerItemProxy */ = {
+		020A8585013FEBB6E5284B482E7AD848 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E8B3671E86091F0AE4786E1070F33B5B;
+			remoteGlobalIDString = 0721D454B13C24ED41FFDB0CE718114B;
+			remoteInfo = SwipeCellKit;
+		};
+		153B37BAE5B6CFD834A9D487685A9D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0721D454B13C24ED41FFDB0CE718114B;
+			remoteInfo = SwipeCellKit;
+		};
+		79832851E321FDA9558483C19B686E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CFAB87C27EF3B38D5253ADAE3FCBC73;
 			remoteInfo = SwiftScanner;
 		};
-		DC107260833E9EECD0EABF4B550D2EA3 /* PBXContainerItemProxy */ = {
+		F17699D4A14194BE119A1F84808EDFDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0F00537256D3C696942BD39B8ECBE9A9;
+			remoteGlobalIDString = 5DA209B9E0F41E2D08ADBC5B7830C220;
 			remoteInfo = SwiftyComments;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08A817F11BDF7B4143F0F48498762ADF /* SwiftScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftScanner.xcconfig; sourceTree = "<group>"; };
-		093F7ECF9D23233C842C70E5EA4442C0 /* SwiftScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2848D4CF4D23602845CFCC1FD6C4AB71 /* StringScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringScanner.swift; path = Sources/StringScanner.swift; sourceTree = "<group>"; };
-		2BAFE020D8C3A7B645EBA11F9FFAF7C5 /* Pods-SwiftyComments_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyComments_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2BF4AA71574BE18BD53543374399AF2E /* SwiftScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftScanner-dummy.m"; sourceTree = "<group>"; };
-		2E6591C02B71581B070E59C19AAAEA8F /* CommentsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommentsViewController.swift; path = SwiftyComments/Classes/CommentsViewController.swift; sourceTree = "<group>"; };
-		2E79C6D365AB3CB5E625292A96BFE663 /* CommentCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = SwiftyComments/Classes/CommentCell.swift; sourceTree = "<group>"; };
-		3C2BDDD089AB3B36E1BD88EB3C31B5F8 /* SwiftyComments.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyComments.xcconfig; sourceTree = "<group>"; };
-		3C3A9A8EFCC587334F4C9C82B1AC611D /* SwiftScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftScanner-prefix.pch"; sourceTree = "<group>"; };
-		3C71D98038487B9E6C880BBE9F0F3512 /* SwiftyComments-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-prefix.pch"; sourceTree = "<group>"; };
-		43165FE32DCE32BE66341CD9701AE8F8 /* SwiftyComments.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyComments.modulemap; sourceTree = "<group>"; };
-		4AE88E9E4F4A65381CE0B8436353062B /* SwiftyComments-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-umbrella.h"; sourceTree = "<group>"; };
-		5D1CD3405488C45EDCDD6AFBEF6C0355 /* Pods-SwiftyComments_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyComments_Example-dummy.m"; sourceTree = "<group>"; };
-		63A6DAAE9EA13A62ED852C90BB74CD1B /* AbstractComment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractComment.swift; path = SwiftyComments/Classes/AbstractComment.swift; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6EB00B967439EB8F2160B52F39B072DA /* Pods-SwiftyComments_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyComments_Example-resources.sh"; sourceTree = "<group>"; };
-		6F1D44BC8220B98011CF314A1C3074E4 /* Pods-SwiftyComments_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyComments_Example-umbrella.h"; sourceTree = "<group>"; };
-		738413AABEACB5929EF38F04026B2448 /* Pods-SwiftyComments_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyComments_Example.release.xcconfig"; sourceTree = "<group>"; };
-		73B17AF157D3F6444DDEADEABF036B3D /* SwiftScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftScanner.modulemap; sourceTree = "<group>"; };
-		7C1F48DE8F4D56DC3C7211A6E2D28106 /* Pods-SwiftyComments_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyComments_Example-frameworks.sh"; sourceTree = "<group>"; };
-		90E13D7A4F2F43FC2786AC322C5F0B7F /* SwiftScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftScanner-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95E380B53C747626BDD52229C87928BD /* SwiftyComments-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyComments-dummy.m"; sourceTree = "<group>"; };
-		97C77745203219FD009E0736 /* CommentsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommentsViewDelegate.swift; path = SwiftyComments/Classes/CommentsViewDelegate.swift; sourceTree = "<group>"; };
-		AF255F4651E2EFA02830B2E534F6A291 /* Pods-SwiftyComments_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyComments_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B4B67019A974DA971DF1D05BC51507A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE47C81A061A4CFA5A237537069713F6 /* Pods_SwiftyComments_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyComments_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE4A92829532CEA70D2FEA1CF5372B1F /* Pods-SwiftyComments_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyComments_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C43C6517CECC5C8CF7AA0452DCA74525 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C98B89E3EF986BC5805BDB0FD569BCE3 /* SwiftyComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB98CD8ED9E9988B74260611838CF669 /* Pods-SwiftyComments_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftyComments_Example.modulemap"; sourceTree = "<group>"; };
-		E44FFFC5FF844C5492A15E49F5D52F7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C9AF77D86E5547DBBCE75EC3734056 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		09756546509FF47888777421A60419D4 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		0B29958FE1B00AE38C4060FC154DB009 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
+		0CD864DD0F411305ED11F61892AD5375 /* Pods-SwiftyComments_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyComments_Example-dummy.m"; sourceTree = "<group>"; };
+		0CF85BC1118F918F57C8F81377D4F336 /* Pods-SwiftyComments_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyComments_Example.release.xcconfig"; sourceTree = "<group>"; };
+		11237BE25425FB067FEA09B33EB6BFAC /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
+		131F4DC10535E52B34E2AA6AE6EF9B02 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
+		1438CC164E1450739087C06DFD0CA5B8 /* Pods-SwiftyComments_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyComments_Example-umbrella.h"; sourceTree = "<group>"; };
+		2094A7EB0BAF3EE2A6C78614DC363EF8 /* SwiftyComments.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SwiftyComments.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		22E2B7B0C35AC639A505150EC491EB49 /* SwiftScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftScanner-umbrella.h"; sourceTree = "<group>"; };
+		24E51E0779169B930483C71F87F209C7 /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = SwiftyComments/Assets/Media.xcassets; sourceTree = "<group>"; };
+		29C67C0EB2E3F6A294D87573DD910D3D /* Pods_SwiftyComments_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftyComments_Example.framework; path = "Pods-SwiftyComments_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A25039EDC8373FD370CE63155F6DF0E /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
+		32266F42A136101C41F9B18D578CB853 /* SwiftyComments-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-prefix.pch"; sourceTree = "<group>"; };
+		34A11A59596AB72D8178A9E5E7742E55 /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
+		38DFCA7C547A79F9E4A0E164FEA6601F /* CommentsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommentsViewController.swift; path = SwiftyComments/Classes/CommentsViewController.swift; sourceTree = "<group>"; };
+		3956E9D64DB37175483205EE3C273AA3 /* SwipeCellKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.xcconfig; sourceTree = "<group>"; };
+		398103CACE08F60DA15E964CB93B5191 /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
+		494DC1597FA2C0A23F7911D44C4BE67C /* SwiftyComments-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-umbrella.h"; sourceTree = "<group>"; };
+		4DAAD4C7B8BB4C465D9F1E7D55768BB0 /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
+		4F41B25787208D62B60612F571602B60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		514865E38A4460B0785607468772AA08 /* Pods-SwiftyComments_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyComments_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		554D5FB18E59D569DC18CEFDF2821A1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5794D95E9071378DD1A28BD09B9D6E70 /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59B99C0BEEE966AF050C3B82FBADF2C0 /* SwiftScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftScanner.xcconfig; sourceTree = "<group>"; };
+		5C7E5815023C7EF9B6D7038E2BC16CB0 /* SwipeTableOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableOptions.swift; path = Source/SwipeTableOptions.swift; sourceTree = "<group>"; };
+		657892915C43A54C562E2C8FEFF5AB24 /* SwiftyComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyComments.framework; path = SwiftyComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67CFA4F80C547A1EA09F1D19F7E70A5D /* Pods-SwiftyComments_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyComments_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6A066BD0513D30576DC866BF61C030A6 /* SwiftyComments.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyComments.modulemap; sourceTree = "<group>"; };
+		6B4DAE851C530A1EEF2775BA1B1DBA55 /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
+		6BCCF126B4FDB07594374D58F316DCBE /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
+		6F4B917F67AA7D833617552A880DDA3C /* SwiftScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftScanner.framework; path = SwiftScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		733BBD97E0A042D2A1AC273616840A6B /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
+		83F8FA843591BC6C8A34EAE28A667B50 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93AB0F97DB9F885D6F71075C4D856F4C /* CommentsViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommentsViewDelegate.swift; path = SwiftyComments/Classes/CommentsViewDelegate.swift; sourceTree = "<group>"; };
+		9EC817A0AA9F39BE0EFA554D4DC18448 /* SwiftyComments-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyComments-dummy.m"; sourceTree = "<group>"; };
+		9F3F6F85B0BF3AC2D8AF481A705C69DF /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
+		A49F2EE1471BF5EC23714BCCAA69CD62 /* AbstractComment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractComment.swift; path = SwiftyComments/Classes/AbstractComment.swift; sourceTree = "<group>"; };
+		A51A542F905164ED3D3DD7367AFE545F /* CommentCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = SwiftyComments/Classes/CommentCell.swift; sourceTree = "<group>"; };
+		A87DC5B163A6343D9CA6B55B7DC42CEC /* SwipeCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-umbrella.h"; sourceTree = "<group>"; };
+		A88A9AA8442CE0C04D0214E740401D19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE728A242F6717D08D189911679D4AC5 /* Pods-SwiftyComments_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyComments_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B8165ABBD8ADAC8D69CA15E30A65E19C /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
+		B8B488C40F1A158A4F4D5BCAB9F49611 /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEE0235BFE27CC6451B0908819EDC0CF /* SwiftScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftScanner.modulemap; sourceTree = "<group>"; };
+		C219D5E469D7602D617E6CDD1ACF58B9 /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
+		C4276198A410241FE94492B838E46E68 /* Pods-SwiftyComments_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyComments_Example-resources.sh"; sourceTree = "<group>"; };
+		D0F2E0DFE8EBA7512EB9DAC2EBA6CD6A /* StringScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringScanner.swift; path = Sources/StringScanner.swift; sourceTree = "<group>"; };
+		D300F1B94101B195DCC9B6E0CF6DBCC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E9477C8CE9FF06F2E7312B0591BD6F /* Pods-SwiftyComments_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyComments_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D7305B75ED4ED6846C3FEA76AAF352D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0220BC1F5DECD7AC651ADAB9B78E28 /* SwiftScanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftScanner-prefix.pch"; sourceTree = "<group>"; };
+		DC7CC609ABE95E0E25C4F1D6EDA803C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DCF88EA84F904CCC2DDA4950ACD03406 /* Pods-SwiftyComments_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftyComments_Example.modulemap"; sourceTree = "<group>"; };
+		E7E9EF683F8E55A0B8F55E139EB51597 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F0B9BC511315AD9D2588646226681D64 /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCellDelegate.swift; path = Source/SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		F288E2224F5D892B1DAC3CB5E105724E /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
+		F2CF001A1D99FC1314C1D432DFE101B0 /* SwiftScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftScanner-dummy.m"; sourceTree = "<group>"; };
+		FBB51ACCD3BE601D633F8BF2A50FBED6 /* SwipeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAction.swift; path = Source/SwipeAction.swift; sourceTree = "<group>"; };
+		FEBD1FA7E3E189BF0B096E74178907C1 /* SwiftyComments.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyComments.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F528581F2088A69E9D95950FC300513 /* Frameworks */ = {
+		487FA6DB29E4834C1BA8077FF1CB679E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924055E2E841CADECA3B3DC915068D36 /* Foundation.framework in Frameworks */,
+				6FA874347F783FB725A115953CC2052D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED8BDACE7E7F17C2D820C62F752B02DB /* Frameworks */ = {
+		98555A08FA4F2808F6CFEE5A3F054AB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E361D24F91DD609FDAF1DCDD2F3E906 /* Foundation.framework in Frameworks */,
+				4D87EC2D8CF376F737CCBD6C89685CFD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA6F0C4759092854F6C0CE5E6F3BA105 /* Frameworks */ = {
+		9C534BC4A8DADC0CC0E9C329690A58F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2A00C09ECD4846E530C5264E399061F /* Foundation.framework in Frameworks */,
+				4C6FB7EDEE19ED55DC1C7D98D226D1B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3D57B44C125FA99711649F006AAC14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1458C215E175816EB0714F7BC876028C /* Foundation.framework in Frameworks */,
+				1F0899F53288132E6783951EA9CC4ADE /* SwipeCellKit.framework in Frameworks */,
+				11E1A085191E4044A7B3563172AD67A5 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1424357C3F6BC6FF3AE7ACBD0348CD22 /* Pods */ = {
+		00DB7D0B051038C39E9520CCEE7B472D /* SwiftyComments */ = {
 			isa = PBXGroup;
 			children = (
-				EDBC9EA13675E5869037801A7848D257 /* SwiftScanner */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		1633406083ACAE68A109ED0BAE6F5EC4 /* SwiftyComments */ = {
-			isa = PBXGroup;
-			children = (
-				63A6DAAE9EA13A62ED852C90BB74CD1B /* AbstractComment.swift */,
-				2E79C6D365AB3CB5E625292A96BFE663 /* CommentCell.swift */,
-				2E6591C02B71581B070E59C19AAAEA8F /* CommentsViewController.swift */,
-				97C77745203219FD009E0736 /* CommentsViewDelegate.swift */,
-				5D347DC40BAB06E393865EEB3C4CE7C3 /* Support Files */,
+				A49F2EE1471BF5EC23714BCCAA69CD62 /* AbstractComment.swift */,
+				A51A542F905164ED3D3DD7367AFE545F /* CommentCell.swift */,
+				38DFCA7C547A79F9E4A0E164FEA6601F /* CommentsViewController.swift */,
+				93AB0F97DB9F885D6F71075C4D856F4C /* CommentsViewDelegate.swift */,
+				10DA1EDD8D3CCB1FD2137DA70B1DEDE8 /* Pod */,
+				A162E628BEC9E2B69C68B66B6EB1A35A /* Resources */,
+				A20D9B877BCD91B4D64771422A66B225 /* Support Files */,
 			);
 			name = SwiftyComments;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		5D21ADA636490A6AC54736716C54E577 /* Development Pods */ = {
+		10DA1EDD8D3CCB1FD2137DA70B1DEDE8 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				1633406083ACAE68A109ED0BAE6F5EC4 /* SwiftyComments */,
+				04C9AF77D86E5547DBBCE75EC3734056 /* LICENSE */,
+				4F41B25787208D62B60612F571602B60 /* README.md */,
+				2094A7EB0BAF3EE2A6C78614DC363EF8 /* SwiftyComments.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		5D347DC40BAB06E393865EEB3C4CE7C3 /* Support Files */ = {
+		400BED9F702539038D0E0EEE0C81BA7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4B67019A974DA971DF1D05BC51507A9 /* Info.plist */,
-				43165FE32DCE32BE66341CD9701AE8F8 /* SwiftyComments.modulemap */,
-				3C2BDDD089AB3B36E1BD88EB3C31B5F8 /* SwiftyComments.xcconfig */,
-				95E380B53C747626BDD52229C87928BD /* SwiftyComments-dummy.m */,
-				3C71D98038487B9E6C880BBE9F0F3512 /* SwiftyComments-prefix.pch */,
-				4AE88E9E4F4A65381CE0B8436353062B /* SwiftyComments-umbrella.h */,
+				B8B488C40F1A158A4F4D5BCAB9F49611 /* SwipeCellKit.framework */,
+				6E146CBEBC113978CC5D0674C9914976 /* iOS */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SwiftyComments";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7C31C6899DED381D90BD9E430842EBD7 /* Support Files */ = {
+		588D7860369EB2D46C68BC411A535B1E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C43C6517CECC5C8CF7AA0452DCA74525 /* Info.plist */,
-				73B17AF157D3F6444DDEADEABF036B3D /* SwiftScanner.modulemap */,
-				08A817F11BDF7B4143F0F48498762ADF /* SwiftScanner.xcconfig */,
-				2BF4AA71574BE18BD53543374399AF2E /* SwiftScanner-dummy.m */,
-				3C3A9A8EFCC587334F4C9C82B1AC611D /* SwiftScanner-prefix.pch */,
-				90E13D7A4F2F43FC2786AC322C5F0B7F /* SwiftScanner-umbrella.h */,
+				D300F1B94101B195DCC9B6E0CF6DBCC6 /* Info.plist */,
+				733BBD97E0A042D2A1AC273616840A6B /* SwipeCellKit.modulemap */,
+				3956E9D64DB37175483205EE3C273AA3 /* SwipeCellKit.xcconfig */,
+				9F3F6F85B0BF3AC2D8AF481A705C69DF /* SwipeCellKit-dummy.m */,
+				0B29958FE1B00AE38C4060FC154DB009 /* SwipeCellKit-prefix.pch */,
+				A87DC5B163A6343D9CA6B55B7DC42CEC /* SwipeCellKit-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftScanner";
+			path = "../Target Support Files/SwipeCellKit";
+			sourceTree = "<group>";
+		};
+		6E146CBEBC113978CC5D0674C9914976 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E7E9EF683F8E55A0B8F55E139EB51597 /* Foundation.framework */,
+				DC7CC609ABE95E0E25C4F1D6EDA803C3 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				5D21ADA636490A6AC54736716C54E577 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				1424357C3F6BC6FF3AE7ACBD0348CD22 /* Pods */,
-				F596A812ADEC53C67F07BB8714FAADF5 /* Products */,
+				CEB3E51B163C4F0FFE8F8D5D4F11CF5B /* Development Pods */,
+				400BED9F702539038D0E0EEE0C81BA7E /* Frameworks */,
+				C9C80969469A8E65B199DB0F95145FA1 /* Pods */,
+				A9D2A9D948DF45D8ACE01F6AF3931EF9 /* Products */,
 				CDAA4332DF1C382CBA49D126285C5F9E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A78E64D5175B2C353C0748590208F075 /* Pods-SwiftyComments_Example */ = {
+		80D57B052A928493117CB960EBCA7E2A /* SwipeCellKit */ = {
 			isa = PBXGroup;
 			children = (
-				E44FFFC5FF844C5492A15E49F5D52F7C /* Info.plist */,
-				DB98CD8ED9E9988B74260611838CF669 /* Pods-SwiftyComments_Example.modulemap */,
-				2BAFE020D8C3A7B645EBA11F9FFAF7C5 /* Pods-SwiftyComments_Example-acknowledgements.markdown */,
-				BE4A92829532CEA70D2FEA1CF5372B1F /* Pods-SwiftyComments_Example-acknowledgements.plist */,
-				5D1CD3405488C45EDCDD6AFBEF6C0355 /* Pods-SwiftyComments_Example-dummy.m */,
-				7C1F48DE8F4D56DC3C7211A6E2D28106 /* Pods-SwiftyComments_Example-frameworks.sh */,
-				6EB00B967439EB8F2160B52F39B072DA /* Pods-SwiftyComments_Example-resources.sh */,
-				6F1D44BC8220B98011CF314A1C3074E4 /* Pods-SwiftyComments_Example-umbrella.h */,
-				AF255F4651E2EFA02830B2E534F6A291 /* Pods-SwiftyComments_Example.debug.xcconfig */,
-				738413AABEACB5929EF38F04026B2448 /* Pods-SwiftyComments_Example.release.xcconfig */,
+				B8165ABBD8ADAC8D69CA15E30A65E19C /* Extensions.swift */,
+				11237BE25425FB067FEA09B33EB6BFAC /* Swipeable.swift */,
+				FBB51ACCD3BE601D633F8BF2A50FBED6 /* SwipeAction.swift */,
+				6BCCF126B4FDB07594374D58F316DCBE /* SwipeActionButton.swift */,
+				34A11A59596AB72D8178A9E5E7742E55 /* SwipeActionsView.swift */,
+				131F4DC10535E52B34E2AA6AE6EF9B02 /* SwipeActionTransitioning.swift */,
+				6B4DAE851C530A1EEF2775BA1B1DBA55 /* SwipeAnimator.swift */,
+				4DAAD4C7B8BB4C465D9F1E7D55768BB0 /* SwipeExpanding.swift */,
+				F288E2224F5D892B1DAC3CB5E105724E /* SwipeExpansionStyle.swift */,
+				398103CACE08F60DA15E964CB93B5191 /* SwipeFeedback.swift */,
+				5C7E5815023C7EF9B6D7038E2BC16CB0 /* SwipeTableOptions.swift */,
+				2A25039EDC8373FD370CE63155F6DF0E /* SwipeTableViewCell.swift */,
+				09756546509FF47888777421A60419D4 /* SwipeTableViewCell+Accessibility.swift */,
+				83F8FA843591BC6C8A34EAE28A667B50 /* SwipeTableViewCell+Display.swift */,
+				F0B9BC511315AD9D2588646226681D64 /* SwipeTableViewCellDelegate.swift */,
+				C219D5E469D7602D617E6CDD1ACF58B9 /* SwipeTransitionLayout.swift */,
+				588D7860369EB2D46C68BC411A535B1E /* Support Files */,
 			);
-			name = "Pods-SwiftyComments_Example";
-			path = "Target Support Files/Pods-SwiftyComments_Example";
+			name = SwipeCellKit;
+			path = SwipeCellKit;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		A162E628BEC9E2B69C68B66B6EB1A35A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				24E51E0779169B930483C71F87F209C7 /* Media.xcassets */,
 			);
-			name = Frameworks;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A20D9B877BCD91B4D64771422A66B225 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				554D5FB18E59D569DC18CEFDF2821A1D /* Info.plist */,
+				6A066BD0513D30576DC866BF61C030A6 /* SwiftyComments.modulemap */,
+				FEBD1FA7E3E189BF0B096E74178907C1 /* SwiftyComments.xcconfig */,
+				9EC817A0AA9F39BE0EFA554D4DC18448 /* SwiftyComments-dummy.m */,
+				32266F42A136101C41F9B18D578CB853 /* SwiftyComments-prefix.pch */,
+				494DC1597FA2C0A23F7911D44C4BE67C /* SwiftyComments-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftyComments";
+			sourceTree = "<group>";
+		};
+		A9D2A9D948DF45D8ACE01F6AF3931EF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29C67C0EB2E3F6A294D87573DD910D3D /* Pods_SwiftyComments_Example.framework */,
+				6F4B917F67AA7D833617552A880DDA3C /* SwiftScanner.framework */,
+				657892915C43A54C562E2C8FEFF5AB24 /* SwiftyComments.framework */,
+				5794D95E9071378DD1A28BD09B9D6E70 /* SwipeCellKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEDD88B0C08B3E063555B1E4FB207241 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7305B75ED4ED6846C3FEA76AAF352D9 /* Info.plist */,
+				BEE0235BFE27CC6451B0908819EDC0CF /* SwiftScanner.modulemap */,
+				59B99C0BEEE966AF050C3B82FBADF2C0 /* SwiftScanner.xcconfig */,
+				F2CF001A1D99FC1314C1D432DFE101B0 /* SwiftScanner-dummy.m */,
+				DA0220BC1F5DECD7AC651ADAB9B78E28 /* SwiftScanner-prefix.pch */,
+				22E2B7B0C35AC639A505150EC491EB49 /* SwiftScanner-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftScanner";
+			sourceTree = "<group>";
+		};
+		C9C80969469A8E65B199DB0F95145FA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF2C4C20572FA9F7BB7B64B9F924229B /* SwiftScanner */,
+				80D57B052A928493117CB960EBCA7E2A /* SwipeCellKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CDAA4332DF1C382CBA49D126285C5F9E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A78E64D5175B2C353C0748590208F075 /* Pods-SwiftyComments_Example */,
+				D9277D555AE1C33838C61BBFF88CAFB9 /* Pods-SwiftyComments_Example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		CEB3E51B163C4F0FFE8F8D5D4F11CF5B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				00DB7D0B051038C39E9520CCEE7B472D /* SwiftyComments */,
 			);
-			name = iOS;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		EDBC9EA13675E5869037801A7848D257 /* SwiftScanner */ = {
+		D9277D555AE1C33838C61BBFF88CAFB9 /* Pods-SwiftyComments_Example */ = {
 			isa = PBXGroup;
 			children = (
-				2848D4CF4D23602845CFCC1FD6C4AB71 /* StringScanner.swift */,
-				7C31C6899DED381D90BD9E430842EBD7 /* Support Files */,
+				A88A9AA8442CE0C04D0214E740401D19 /* Info.plist */,
+				DCF88EA84F904CCC2DDA4950ACD03406 /* Pods-SwiftyComments_Example.modulemap */,
+				514865E38A4460B0785607468772AA08 /* Pods-SwiftyComments_Example-acknowledgements.markdown */,
+				D4E9477C8CE9FF06F2E7312B0591BD6F /* Pods-SwiftyComments_Example-acknowledgements.plist */,
+				0CD864DD0F411305ED11F61892AD5375 /* Pods-SwiftyComments_Example-dummy.m */,
+				67CFA4F80C547A1EA09F1D19F7E70A5D /* Pods-SwiftyComments_Example-frameworks.sh */,
+				C4276198A410241FE94492B838E46E68 /* Pods-SwiftyComments_Example-resources.sh */,
+				1438CC164E1450739087C06DFD0CA5B8 /* Pods-SwiftyComments_Example-umbrella.h */,
+				AE728A242F6717D08D189911679D4AC5 /* Pods-SwiftyComments_Example.debug.xcconfig */,
+				0CF85BC1118F918F57C8F81377D4F336 /* Pods-SwiftyComments_Example.release.xcconfig */,
 			);
+			name = "Pods-SwiftyComments_Example";
+			path = "Target Support Files/Pods-SwiftyComments_Example";
+			sourceTree = "<group>";
+		};
+		EF2C4C20572FA9F7BB7B64B9F924229B /* SwiftScanner */ = {
+			isa = PBXGroup;
+			children = (
+				D0F2E0DFE8EBA7512EB9DAC2EBA6CD6A /* StringScanner.swift */,
+				AEDD88B0C08B3E063555B1E4FB207241 /* Support Files */,
+			);
+			name = SwiftScanner;
 			path = SwiftScanner;
-			sourceTree = "<group>";
-		};
-		F596A812ADEC53C67F07BB8714FAADF5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE47C81A061A4CFA5A237537069713F6 /* Pods_SwiftyComments_Example.framework */,
-				093F7ECF9D23233C842C70E5EA4442C0 /* SwiftScanner.framework */,
-				C98B89E3EF986BC5805BDB0FD569BCE3 /* SwiftyComments.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		426498870730A1524497B6C1E631D011 /* Headers */ = {
+		30DE83E584D23B6927F883D86555E994 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4CBC1FEBD4286ED93C44CA253AAE6CA /* SwiftScanner-umbrella.h in Headers */,
+				35B38BF2E0390FBA2329AF8C0EB2428C /* SwiftScanner-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C31958334C69C3464FBA85678B7A4C9 /* Headers */ = {
+		5C6B3352704C91A02B9AEF1585190160 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D7B04D7945585F29F766D1BD4C3DA2 /* Pods-SwiftyComments_Example-umbrella.h in Headers */,
+				F710CCDDA0C2DBF1238FB9209B90AB9C /* SwipeCellKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C5C882D3F81A2C3A90FCBC6D31925B1 /* Headers */ = {
+		B213888C662FB55E8650CEA2F6983320 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87AB83CDE73C4DF0E517C480D679F9B6 /* SwiftyComments-umbrella.h in Headers */,
+				CA9218E85F16DE0232F40FAA7FFAB4FF /* Pods-SwiftyComments_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD8F2B51C9A49EDBF2FD68DC4AAD6377 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8629E33970ECCE7A021056EE62AD1C6B /* SwiftyComments-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0F00537256D3C696942BD39B8ECBE9A9 /* SwiftyComments */ = {
+		0721D454B13C24ED41FFDB0CE718114B /* SwipeCellKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4158055250322848728992642ADB192 /* Build configuration list for PBXNativeTarget "SwiftyComments" */;
+			buildConfigurationList = 871A94E70FD3DF793B7B4B8107E9F275 /* Build configuration list for PBXNativeTarget "SwipeCellKit" */;
 			buildPhases = (
-				043FE63427495337C5C6C3C2860FA7FF /* Sources */,
-				ED8BDACE7E7F17C2D820C62F752B02DB /* Frameworks */,
-				8C5C882D3F81A2C3A90FCBC6D31925B1 /* Headers */,
+				8AECC1D885EBD9831CDBDFE581DB67C3 /* Sources */,
+				9C534BC4A8DADC0CC0E9C329690A58F4 /* Frameworks */,
+				5C6B3352704C91A02B9AEF1585190160 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftyComments;
-			productName = SwiftyComments;
-			productReference = C98B89E3EF986BC5805BDB0FD569BCE3 /* SwiftyComments.framework */;
+			name = SwipeCellKit;
+			productName = SwipeCellKit;
+			productReference = 5794D95E9071378DD1A28BD09B9D6E70 /* SwipeCellKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C11BC982EE3BE1A09913C37A57EC44CE /* Pods-SwiftyComments_Example */ = {
+		5A4F175F52B0C132F10FD3CAC4F17FF7 /* Pods-SwiftyComments_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 103553828EFB0A383952EA2BF67D0369 /* Build configuration list for PBXNativeTarget "Pods-SwiftyComments_Example" */;
+			buildConfigurationList = 25DFB62AF072333BC664C70F0649481B /* Build configuration list for PBXNativeTarget "Pods-SwiftyComments_Example" */;
 			buildPhases = (
-				8D9588D7CECB35C4287A878A85CC3317 /* Sources */,
-				1F528581F2088A69E9D95950FC300513 /* Frameworks */,
-				8C31958334C69C3464FBA85678B7A4C9 /* Headers */,
+				7EB39ED8F8FB98A152FE44D9123D282A /* Sources */,
+				487FA6DB29E4834C1BA8077FF1CB679E /* Frameworks */,
+				B213888C662FB55E8650CEA2F6983320 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB03B5840E6F9C30660497EE2CC5836A /* PBXTargetDependency */,
-				FD2624E12E79333131990C5CE39D6DBE /* PBXTargetDependency */,
+				EF55F5E1E43066AB35740782407A0AFA /* PBXTargetDependency */,
+				1A60E6081230F76E27A73AA1816470A3 /* PBXTargetDependency */,
+				E6A3011A42B6CBD812E8AEC70EDD0584 /* PBXTargetDependency */,
 			);
 			name = "Pods-SwiftyComments_Example";
 			productName = "Pods-SwiftyComments_Example";
-			productReference = BE47C81A061A4CFA5A237537069713F6 /* Pods_SwiftyComments_Example.framework */;
+			productReference = 29C67C0EB2E3F6A294D87573DD910D3D /* Pods_SwiftyComments_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E8B3671E86091F0AE4786E1070F33B5B /* SwiftScanner */ = {
+		5CFAB87C27EF3B38D5253ADAE3FCBC73 /* SwiftScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B49CF9398BFE0711EC3F0CBE1EF09E9E /* Build configuration list for PBXNativeTarget "SwiftScanner" */;
+			buildConfigurationList = 316AD7EF1401F4EDC4D0BBAEB2FEC7A7 /* Build configuration list for PBXNativeTarget "SwiftScanner" */;
 			buildPhases = (
-				6DF4A1DA7463C8A4575B39AC19069DF5 /* Sources */,
-				FA6F0C4759092854F6C0CE5E6F3BA105 /* Frameworks */,
-				426498870730A1524497B6C1E631D011 /* Headers */,
+				ACC31B3EF19C4F8E0D323B4501BB3FDC /* Sources */,
+				98555A08FA4F2808F6CFEE5A3F054AB5 /* Frameworks */,
+				30DE83E584D23B6927F883D86555E994 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -313,7 +461,26 @@
 			);
 			name = SwiftScanner;
 			productName = SwiftScanner;
-			productReference = 093F7ECF9D23233C842C70E5EA4442C0 /* SwiftScanner.framework */;
+			productReference = 6F4B917F67AA7D833617552A880DDA3C /* SwiftScanner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5DA209B9E0F41E2D08ADBC5B7830C220 /* SwiftyComments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 366CE62EA5304FF9051CC6A1244F0330 /* Build configuration list for PBXNativeTarget "SwiftyComments" */;
+			buildPhases = (
+				EB47FB40FB7A36D655F5AB343E1B8F81 /* Sources */,
+				FD3D57B44C125FA99711649F006AAC14 /* Frameworks */,
+				44D42ED93BAA96EC6EBDCF7C0BC01EE0 /* Resources */,
+				DD8F2B51C9A49EDBF2FD68DC4AAD6377 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36F1EFEF7A72969E6123E7B65B1D91D8 /* PBXTargetDependency */,
+			);
+			name = SwiftyComments;
+			productName = SwiftyComments;
+			productReference = 657892915C43A54C562E2C8FEFF5AB24 /* SwiftyComments.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -322,8 +489,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -333,368 +500,232 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F596A812ADEC53C67F07BB8714FAADF5 /* Products */;
+			productRefGroup = A9D2A9D948DF45D8ACE01F6AF3931EF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C11BC982EE3BE1A09913C37A57EC44CE /* Pods-SwiftyComments_Example */,
-				E8B3671E86091F0AE4786E1070F33B5B /* SwiftScanner */,
-				0F00537256D3C696942BD39B8ECBE9A9 /* SwiftyComments */,
+				5A4F175F52B0C132F10FD3CAC4F17FF7 /* Pods-SwiftyComments_Example */,
+				5CFAB87C27EF3B38D5253ADAE3FCBC73 /* SwiftScanner */,
+				5DA209B9E0F41E2D08ADBC5B7830C220 /* SwiftyComments */,
+				0721D454B13C24ED41FFDB0CE718114B /* SwipeCellKit */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		44D42ED93BAA96EC6EBDCF7C0BC01EE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F89EF7D8213B395E44B42FEB4436EFA /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		043FE63427495337C5C6C3C2860FA7FF /* Sources */ = {
+		7EB39ED8F8FB98A152FE44D9123D282A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC501FEBF9CFDF1207597D142ED1699F /* AbstractComment.swift in Sources */,
-				3865C20FC806D4C8CE9385F8230F598E /* CommentCell.swift in Sources */,
-				97C77746203219FD009E0736 /* CommentsViewDelegate.swift in Sources */,
-				832E96E0414A02680F25F0517916D825 /* CommentsViewController.swift in Sources */,
-				1DBB245CDD6D60C5DE71EFE162B8209F /* SwiftyComments-dummy.m in Sources */,
+				10CF280338D9D032F130F88E54A6C5AA /* Pods-SwiftyComments_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6DF4A1DA7463C8A4575B39AC19069DF5 /* Sources */ = {
+		8AECC1D885EBD9831CDBDFE581DB67C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFE2C513A029CAE9F06A72631BF96014 /* StringScanner.swift in Sources */,
-				174D3AA849B1D7A07A03B69AED88DF7D /* SwiftScanner-dummy.m in Sources */,
+				8B55CA0C52AF3DCEF908D027B89177BF /* Extensions.swift in Sources */,
+				27DA99C2A64F37C56C9FFF1C8A863FB5 /* Swipeable.swift in Sources */,
+				9D545E86333E8AAC74F3844CFA4307EC /* SwipeAction.swift in Sources */,
+				FC99F224B2336AF0977EC457B06A0AF9 /* SwipeActionButton.swift in Sources */,
+				AA5AF44E7909DD23767248364DB18910 /* SwipeActionsView.swift in Sources */,
+				C17CE43FCCA52607E843906B6E0EB976 /* SwipeActionTransitioning.swift in Sources */,
+				420853D4C51C24ADBA8EC08CE9141D0F /* SwipeAnimator.swift in Sources */,
+				54AEFC4DE93BDD20366DC59977572ABF /* SwipeCellKit-dummy.m in Sources */,
+				B51753674CFACA442CDDE748E40D9D8B /* SwipeExpanding.swift in Sources */,
+				C70D4345E45413C25B1C720D2A5A3D24 /* SwipeExpansionStyle.swift in Sources */,
+				0E94120D3A1BF66E8219A87BAF60411C /* SwipeFeedback.swift in Sources */,
+				027A7B774BA8FAB2CECC48F59B393A8E /* SwipeTableOptions.swift in Sources */,
+				CA406074BC62C08686E4077879ECB567 /* SwipeTableViewCell+Accessibility.swift in Sources */,
+				202EA0775444F54BF0DF8E7C5228AF17 /* SwipeTableViewCell+Display.swift in Sources */,
+				5468FB2D586B383665D872AA7AE485DE /* SwipeTableViewCell.swift in Sources */,
+				016B701798A2746091638A8508009B27 /* SwipeTableViewCellDelegate.swift in Sources */,
+				BB372C3776E302D7C2DF7E4FDAA76234 /* SwipeTransitionLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D9588D7CECB35C4287A878A85CC3317 /* Sources */ = {
+		ACC31B3EF19C4F8E0D323B4501BB3FDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E22C1B8A4F91398FFF36A456E8D5863 /* Pods-SwiftyComments_Example-dummy.m in Sources */,
+				BF33D858FFD84F0B82A9FFAE70A0813E /* StringScanner.swift in Sources */,
+				142AC601FAD99400931B6747608A5656 /* SwiftScanner-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB47FB40FB7A36D655F5AB343E1B8F81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4671E53562BD7138CF1F63C1A56098E6 /* AbstractComment.swift in Sources */,
+				E99F527B8EA65D1C464C620A2524B534 /* CommentCell.swift in Sources */,
+				4D2C6D7B0880CC1480125F52003ED830 /* CommentsViewController.swift in Sources */,
+				A94B195AEDC5053E1251240D3F9A3D0D /* CommentsViewDelegate.swift in Sources */,
+				549E59359897A8DB82A8386EDFCC8134 /* SwiftyComments-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB03B5840E6F9C30660497EE2CC5836A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftScanner;
-			target = E8B3671E86091F0AE4786E1070F33B5B /* SwiftScanner */;
-			targetProxy = D82437022A9FB2C9402C4A0753CAAC27 /* PBXContainerItemProxy */;
-		};
-		FD2624E12E79333131990C5CE39D6DBE /* PBXTargetDependency */ = {
+		1A60E6081230F76E27A73AA1816470A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyComments;
-			target = 0F00537256D3C696942BD39B8ECBE9A9 /* SwiftyComments */;
-			targetProxy = DC107260833E9EECD0EABF4B550D2EA3 /* PBXContainerItemProxy */;
+			target = 5DA209B9E0F41E2D08ADBC5B7830C220 /* SwiftyComments */;
+			targetProxy = F17699D4A14194BE119A1F84808EDFDF /* PBXContainerItemProxy */;
+		};
+		36F1EFEF7A72969E6123E7B65B1D91D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwipeCellKit;
+			target = 0721D454B13C24ED41FFDB0CE718114B /* SwipeCellKit */;
+			targetProxy = 153B37BAE5B6CFD834A9D487685A9D39 /* PBXContainerItemProxy */;
+		};
+		E6A3011A42B6CBD812E8AEC70EDD0584 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwipeCellKit;
+			target = 0721D454B13C24ED41FFDB0CE718114B /* SwipeCellKit */;
+			targetProxy = 020A8585013FEBB6E5284B482E7AD848 /* PBXContainerItemProxy */;
+		};
+		EF55F5E1E43066AB35740782407A0AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftScanner;
+			target = 5CFAB87C27EF3B38D5253ADAE3FCBC73 /* SwiftScanner */;
+			targetProxy = 79832851E321FDA9558483C19B686E46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
+		35374CD08C7C8E46978FBA4F59959956 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3956E9D64DB37175483205EE3C273AA3 /* SwipeCellKit.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		36E9FEF38F8F85A87E2DD409DA4C0CE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B99C0BEEE966AF050C3B82FBADF2C0 /* SwiftScanner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftScanner/SwiftScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftScanner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftScanner/SwiftScanner.modulemap";
+				PRODUCT_NAME = SwiftScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2E99D52821FCA122E61F705E586C2BEF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C2BDDD089AB3B36E1BD88EB3C31B5F8 /* SwiftyComments.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyComments/SwiftyComments-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyComments/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyComments/SwiftyComments.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyComments;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5CC0CB37A7154F78B42E2788787295C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF255F4651E2EFA02830B2E534F6A291 /* Pods-SwiftyComments_Example.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyComments_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftyComments_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7F22AFC1C61C4009E3F872937E76D004 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 738413AABEACB5929EF38F04026B2448 /* Pods-SwiftyComments_Example.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyComments_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftyComments_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		96E1DF8358E43B08225EDE05646A2C05 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08A817F11BDF7B4143F0F48498762ADF /* SwiftScanner.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftScanner/SwiftScanner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftScanner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftScanner/SwiftScanner.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftScanner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9CCAC5AE7E5903F128D7C9C44A412EDE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C2BDDD089AB3B36E1BD88EB3C31B5F8 /* SwiftyComments.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyComments/SwiftyComments-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyComments/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyComments/SwiftyComments.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyComments;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CA7861D0F323BDD871AE91421D65A6D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08A817F11BDF7B4143F0F48498762ADF /* SwiftScanner.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftScanner/SwiftScanner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftScanner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftScanner/SwiftScanner.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftScanner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EED546DBB23FC32035C9BDC4E22B30BD /* Debug */ = {
+		5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -702,14 +733,266 @@
 			};
 			name = Debug;
 		};
+		5C1218013DBDD1940322D22135501947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3956E9D64DB37175483205EE3C273AA3 /* SwipeCellKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		803579D833BA94888F8EA70E451CB1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CF85BC1118F918F57C8F81377D4F336 /* Pods-SwiftyComments_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyComments_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftyComments_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		827269710C98D60C14D46BC6AF9BF728 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A2E1AFA99EF2868854C0C2F7984B9D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE728A242F6717D08D189911679D4AC5 /* Pods-SwiftyComments_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftyComments_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftyComments_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B310190C762E434969D3430B4BB8C55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59B99C0BEEE966AF050C3B82FBADF2C0 /* SwiftScanner.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftScanner/SwiftScanner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftScanner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftScanner/SwiftScanner.modulemap";
+				PRODUCT_NAME = SwiftScanner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D24694F971E7269CACD9338BA856A600 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBD1FA7E3E189BF0B096E74178907C1 /* SwiftyComments.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyComments/SwiftyComments-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyComments/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyComments/SwiftyComments.modulemap";
+				PRODUCT_NAME = SwiftyComments;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1637D153BDE2197CC8A3337241AF043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBD1FA7E3E189BF0B096E74178907C1 /* SwiftyComments.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyComments/SwiftyComments-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyComments/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyComments/SwiftyComments.modulemap";
+				PRODUCT_NAME = SwiftyComments;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		103553828EFB0A383952EA2BF67D0369 /* Build configuration list for PBXNativeTarget "Pods-SwiftyComments_Example" */ = {
+		25DFB62AF072333BC664C70F0649481B /* Build configuration list for PBXNativeTarget "Pods-SwiftyComments_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CC0CB37A7154F78B42E2788787295C3 /* Debug */,
-				7F22AFC1C61C4009E3F872937E76D004 /* Release */,
+				A2E1AFA99EF2868854C0C2F7984B9D4D /* Debug */,
+				803579D833BA94888F8EA70E451CB1A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -717,26 +1000,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EED546DBB23FC32035C9BDC4E22B30BD /* Debug */,
-				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
+				5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */,
+				827269710C98D60C14D46BC6AF9BF728 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B49CF9398BFE0711EC3F0CBE1EF09E9E /* Build configuration list for PBXNativeTarget "SwiftScanner" */ = {
+		316AD7EF1401F4EDC4D0BBAEB2FEC7A7 /* Build configuration list for PBXNativeTarget "SwiftScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96E1DF8358E43B08225EDE05646A2C05 /* Debug */,
-				CA7861D0F323BDD871AE91421D65A6D7 /* Release */,
+				B310190C762E434969D3430B4BB8C55E /* Debug */,
+				36E9FEF38F8F85A87E2DD409DA4C0CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4158055250322848728992642ADB192 /* Build configuration list for PBXNativeTarget "SwiftyComments" */ = {
+		366CE62EA5304FF9051CC6A1244F0330 /* Build configuration list for PBXNativeTarget "SwiftyComments" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E99D52821FCA122E61F705E586C2BEF /* Debug */,
-				9CCAC5AE7E5903F128D7C9C44A412EDE /* Release */,
+				E1637D153BDE2197CC8A3337241AF043 /* Debug */,
+				D24694F971E7269CACD9338BA856A600 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		871A94E70FD3DF793B7B4B8107E9F275 /* Build configuration list for PBXNativeTarget "SwipeCellKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35374CD08C7C8E46978FBA4F59959956 /* Debug */,
+				5C1218013DBDD1940322D22135501947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

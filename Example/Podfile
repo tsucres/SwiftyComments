@@ -3,5 +3,4 @@ use_frameworks!
 target 'SwiftyComments_Example' do
   pod 'SwiftyComments', :path => '../'
   pod 'SwiftScanner', '~> 1.0.2'
-  
 end

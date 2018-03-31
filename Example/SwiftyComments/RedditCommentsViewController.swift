@@ -32,6 +32,9 @@ class FoldableRedditCommentsViewController: RedditCommentsViewController, Commen
         super.viewDidLoad()
         self.delegate = self
         
+        self.swipeToHide = true
+        self.swipeActionColor = RedditConstants.flashyColor
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -65,7 +68,8 @@ class RedditCommentsViewController: CommentsViewController {
         
         currentlyDisplayed = allComments
     }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CommentCell {
+    
+    override open func commentsView(_ tableView: UITableView, commentCellForModel commentModel: AbstractComment, atIndexPath indexPath: IndexPath) -> CommentCell {
         let commentCell = tableView.dequeueReusableCell(withIdentifier: commentCellId, for: indexPath) as! RedditCommentCell
         let comment = currentlyDisplayed[indexPath.row] as! RichComment
         commentCell.level = comment.level
@@ -74,15 +78,15 @@ class RedditCommentsViewController: CommentsViewController {
         commentCell.date = comment.soMuchTimeAgo()
         commentCell.upvotes = comment.upvotes
         commentCell.isFolded = comment.isFolded
+        commentCell.delegate = self
         return commentCell
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.tintColor = .black
-        UIApplication.shared.statusBarStyle = .default
+        self.navigationController?.navigationBar.barTintColor = RedditConstants.flashyColor
+        self.navigationController?.navigationBar.tintColor = .white
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 }
 

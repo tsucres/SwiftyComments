@@ -1,15 +1,20 @@
 {
   "name": "SwiftyComments",
   "version": "0.1.0",
-  "summary": "A short description of SwiftyComments.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "UITableView based component designed to display a hierarchy of expandable/foldable comments.",
+  "description": "SwiftyComments is a UITableView based component designed to display a hierarchy of expandable/foldable comments.",
   "homepage": "https://github.com/tsucres/SwiftyComments",
+  "screenshots": [
+    "https://github.com/tsucres/SwiftyComments/raw/master/Screenshots/ImgurExample.png",
+    "https://github.com/tsucres/SwiftyComments/raw/master/Screenshots/HNExample.png",
+    "https://github.com/tsucres/SwiftyComments/raw/master/Screenshots/RedditExample.png"
+  ],
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "tsucres": "stefsercu@gmail.com"
+    "Stéphane Sercu": "stefsercu@gmail.com"
   },
   "source": {
     "git": "https://github.com/tsucres/SwiftyComments.git",
@@ -18,5 +23,12 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "SwiftyComments/Classes/**/*"
+  "source_files": "SwiftyComments/Classes/**/*",
+  "resources": "SwiftyComments/Assets/*.xcassets",
+  "dependencies": {
+    "SwipeCellKit": [
+
+    ]
+  },
+  "frameworks": "UIKit"
 }

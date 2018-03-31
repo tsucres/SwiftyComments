@@ -1,6 +1,8 @@
 PODS:
   - SwiftScanner (1.0.3)
-  - SwiftyComments (0.1.0)
+  - SwiftyComments (0.1.0):
+    - SwipeCellKit
+  - SwipeCellKit (2.1.0)
 
 DEPENDENCIES:
   - SwiftScanner (~> 1.0.2)
@@ -12,8 +14,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SwiftScanner: 70897e82bece6e6a0803b105efed6118c46fa20e
-  SwiftyComments: 7c8c192474f07a3f10ae6a9e77399c3740102ed9
+  SwiftyComments: 93366b8155bc19d38ed360a275551bb466a3846c
+  SwipeCellKit: 80bdb188166484d8a0d813d9fd7748ad33181815
 
-PODFILE CHECKSUM: b87d3b7f74b910d9b5ad6d9904549e9b358d57f5
+PODFILE CHECKSUM: 7711333d67fdc56a7062f213fae2e44bac4a7fa6
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

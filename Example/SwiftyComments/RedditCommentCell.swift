@@ -10,11 +10,17 @@ import UIKit
 import SwiftyComments
 
 struct RedditConstants {
-    static let sepColor = UIColor(red: 239/255, green: 239/255, blue: 237/255, alpha: 1)
-    static let posterColor = UIColor(red: 165/255, green: 165/255, blue: 165/255, alpha: 1)
-    static let backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 245/255, alpha: 1)
-    static let commentMarginColor = #colorLiteral(red: 0.9880551696, green: 0.988458693, blue: 0.9839059711, alpha: 1)
+    static let sepColor = #colorLiteral(red: 0.9686660171, green: 0.9768124223, blue: 0.9722633958, alpha: 1)
+    static let backgroundColor = #colorLiteral(red: 0.9961144328, green: 1, blue: 0.9999337792, alpha: 1)
+    static let commentMarginColor = RedditConstants.backgroundColor
+    static let rootCommentMarginColor = #colorLiteral(red: 0.9332661033, green: 0.9416968226, blue: 0.9327681065, alpha: 1)
     static let identationColor = #colorLiteral(red: 0.929128468, green: 0.9298127294, blue: 0.9208832383, alpha: 1)
+    static let metadataFont = UIFont.systemFont(ofSize: 13, weight: .regular)
+    static let metadataColor = #colorLiteral(red: 0.6823018193, green: 0.682382822, blue: 0.6822645068, alpha: 1)
+    static let textFont = UIFont.systemFont(ofSize: 15, weight: .regular)
+    static let textColor = #colorLiteral(red: 0.4042215049, green: 0.4158815145, blue: 0.4158077836, alpha: 1)
+    static let controlsColor = #colorLiteral(red: 0.7295756936, green: 0.733242631, blue: 0.7375010848, alpha: 1)
+    static let flashyColor = #colorLiteral(red: 0.1220618263, green: 0.8247511387, blue: 0.7332885861, alpha: 1)
 }
 
 
@@ -56,14 +62,35 @@ class RedditCommentCell: CommentCell {
         get {
             return self.content.isFolded
         } set(value) {
-            self.content.isFolded = value
+            if value != isFolded {
+                UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [.autoreverse], animations: {
+                    self.backgroundColor = RedditConstants.flashyColor.withAlphaComponent(0.06)
+                }, completion: { (done) in
+                    self.backgroundColor = RedditConstants.backgroundColor
+                })
+                
+                self.content.isFolded = value
+            }
+            
         }
     }
+    lazy var foldBackgroundColorAnimation: CABasicAnimation = {
+        let anim = CABasicAnimation(keyPath: "backgroundColor")
+        anim.duration = 1.0;
+        anim.autoreverses = true
+        var h:CGFloat = 0.0, s:CGFloat = 0.0, l:CGFloat = 0.0, a:CGFloat = 0.0
+        RedditConstants.backgroundColor.getHue(&h, saturation: &s, brightness: &l, alpha: &a)
+        anim.fromValue = RedditConstants.backgroundColor
+        anim.toValue = UIColor.init(hue: h, saturation: s, brightness: l+0.2, alpha: a);
+        return anim;
+    }()
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commentViewContent = RedditCommentView()
         self.backgroundColor = RedditConstants.backgroundColor
         self.commentMarginColor = RedditConstants.commentMarginColor
+        self.rootCommentMargin = 8
+        self.rootCommentMarginColor = RedditConstants.rootCommentMarginColor
         self.indentationIndicatorColor = RedditConstants.identationColor
         self.commentMargin = 0
         self.isIndentationIndicatorsExtended = true
@@ -140,24 +167,24 @@ class RedditCommentView: UIView {
         contentLabel.translatesAutoresizingMaskIntoConstraints = false
         contentLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         contentLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        contentLabel.topAnchor.constraint(equalTo: posterLabel.bottomAnchor).isActive = true
+        contentLabel.topAnchor.constraint(equalTo: posterLabel.bottomAnchor, constant: 3).isActive = true
         contentHeightConstraint = contentLabel.heightAnchor.constraint(equalToConstant: 0)
         setupControlView()
         
         addSubview(controlView)
         controlView.translatesAutoresizingMaskIntoConstraints = false
         controlView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        controlView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor).isActive = true
-        controlView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        controlView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 5).isActive = true
+        controlView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
         controlBarHeightConstraint = controlView.heightAnchor.constraint(equalToConstant: 0)
     }
     
 
     private func setupControlView() {
         let sep1 = UIView()
-        sep1.backgroundColor = #colorLiteral(red: 0.9566848874, green: 0.9570848346, blue: 0.9525371194, alpha: 1)
+        sep1.backgroundColor = RedditConstants.sepColor
         let sep2 = UIView()
-        sep2.backgroundColor = #colorLiteral(red: 0.9566848874, green: 0.9570848346, blue: 0.9525371194, alpha: 1)
+        sep2.backgroundColor = RedditConstants.sepColor
         
         controlView.addSubview(downvoteButton)
         controlView.addSubview(upvotesLabel)
@@ -208,40 +235,44 @@ class RedditCommentView: UIView {
     let controlView = UIView()
     let moreBtn: UIButton = {
         let btn = UIButton()
-        btn.setImage(#imageLiteral(resourceName: "mre"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "mre").withRenderingMode(.alwaysTemplate), for: .normal)
+        btn.tintColor = RedditConstants.controlsColor
         return btn
     }()
     let replyButton: UIButton = {
         let btn = UIButton()
         btn.setTitle(" Reply", for: .normal)
-        btn.setTitleColor(RedditConstants.posterColor, for: .normal)
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 11)
-        btn.setImage(#imageLiteral(resourceName: "exprt"), for: .normal)
+        btn.setTitleColor(RedditConstants.controlsColor, for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        btn.setImage(#imageLiteral(resourceName: "exprt").withRenderingMode(.alwaysTemplate), for: .normal)
+        btn.tintColor = RedditConstants.controlsColor
         return btn
     }()
     let upvoteButton: UIButton = {
         let btn = UIButton()
-        btn.setImage(#imageLiteral(resourceName: "upvte"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "upvte").withRenderingMode(.alwaysTemplate), for: .normal)
+        btn.tintColor = RedditConstants.controlsColor
         return btn
     }()
     let upvotesLabel: UILabel = {
         let lbl = UILabel()
-        lbl.textColor = RedditConstants.posterColor
+        lbl.textColor = RedditConstants.controlsColor
         lbl.text = "42"
-        lbl.font = UIFont.systemFont(ofSize: 11)
+        lbl.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         return lbl
     }()
     let downvoteButton: UIButton = {
         let btn = UIButton()
-        btn.setImage(#imageLiteral(resourceName: "downvte"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "downvte").withRenderingMode(.alwaysTemplate), for: .normal)
+        btn.tintColor = RedditConstants.controlsColor
         return btn
     }()
     let contentLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "No content"
-        lbl.textColor = UIColor.black
+        lbl.textColor = RedditConstants.textColor
         lbl.lineBreakMode = .byWordWrapping
-        lbl.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.regular)
+        lbl.font = RedditConstants.textFont
         lbl.numberOfLines = 0
         lbl.textAlignment = .left
         return lbl
@@ -249,8 +280,8 @@ class RedditCommentView: UIView {
     let posterLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "annonymous"
-        lbl.textColor = RedditConstants.posterColor
-        lbl.font = UIFont.systemFont(ofSize: 11, weight: UIFont.Weight.regular)
+        lbl.textColor = RedditConstants.metadataColor
+        lbl.font = RedditConstants.metadataFont
         lbl.textAlignment = .left
         return lbl
     }()

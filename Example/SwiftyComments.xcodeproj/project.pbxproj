@@ -282,11 +282,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftScanner/SwiftScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyComments/SwiftyComments.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyComments.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -6,10 +6,10 @@
 //  Copyright © 2017 Stéphane Sercu. All rights reserved.
 //
 import UIKit
-
+import SwipeCellKit
 
 /// ViewController displaying expandable comments.
-open class CommentsViewController: UITableViewController {
+open class CommentsViewController: UITableViewController, SwipeTableViewCellDelegate {
     
     /// The list of comments correctly displayed in the tableView (in linearized form)
     var _currentlyDisplayed: [AbstractComment] = []
@@ -28,9 +28,23 @@ open class CommentsViewController: UITableViewController {
     /// If true, when a cell is expanded, the tableView will scroll to make the new cells visible
     open var makeExpandedCellsVisible: Bool = true
     
-    
+    /// Enable/Disable the "swipe to hide" gesture
     open var swipeToHide: Bool = true
     
+    // TODO: move this somewhere else?
+    open var swipeActionColor: UIColor = #colorLiteral(red: 0.4147516489, green: 0.8618777394, blue: 0.8051461577, alpha: 1)
+    open var swipeActionHighlightedColor: UIColor = #colorLiteral(red: 0.7551190257, green: 0.8365258574, blue: 0.8273909688, alpha: 1)
+    open var swipeActionText: String = "Collapse"
+    open var swipeActionImage: UIImage = CommentsViewController.getCollapseImage()
+        
+    static func getCollapseImage() -> UIImage {
+        let bundle = Bundle(for: CommentsViewController.self)
+        return UIImage(named: "collapse", in: bundle, compatibleWith: nil)!
+    }
+    open var swipeActionHighlightedImage: UIImage = CommentsViewController.getCollapseImage()
+    open var swipeActionTextColor: UIColor = .white
+    open var swipeActionHighlightedTextColor: UIColor = .white
+    open var swipeActionTextFont: UIFont = UIFont.systemFont(ofSize: 17.0, weight: .bold)
     
     open var fullyExpanded: Bool = false {
         didSet {
@@ -139,6 +153,19 @@ open class CommentsViewController: UITableViewController {
         }
     }
     
+    open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let comment = currentlyDisplayed[indexPath.row]
+        let commentCell = commentsView(tableView, commentCellForModel: comment, atIndexPath: indexPath)
+        if swipeToHide {
+            commentCell.delegate = self
+        }
+        return commentCell
+    }
+    
+    open func commentsView(_ tableView: UITableView, commentCellForModel commentModel: AbstractComment, atIndexPath indexPath: IndexPath) -> CommentCell {
+        return CommentCell()
+    }
+    
     open func isCellExpanded(indexPath: IndexPath) -> Bool {
         let com: AbstractComment = _currentlyDisplayed[indexPath.row]
         return _currentlyDisplayed.count > indexPath.row+1 &&  // if not last cell
@@ -146,18 +173,30 @@ open class CommentsViewController: UITableViewController {
     }
     
     
-    open override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return swipeToHide && isCellExpanded(indexPath: indexPath)
-    }
-    
-    open override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let foldAction = UITableViewRowAction(style: .destructive, title: "Hide") { [weak self](action, indexPath) in
+    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        guard swipeToHide && isCellExpanded(indexPath: indexPath) else { return nil }
+        
+        let collapseAction = SwipeAction(style: .destructive, title: swipeActionText) { [weak self](action, indexPath) in
             if self != nil {
                 self!.tableView(self!.tableView, didSelectRowAt: indexPath)
+                action.fulfill(with: .reset)
             }
         }
-        foldAction.backgroundColor = #colorLiteral(red: 0.4147516489, green: 0.8618777394, blue: 0.8051461577, alpha: 1)
         
-        return [foldAction]
+        // customize the action appearance
+        collapseAction.backgroundColor = swipeActionColor
+        collapseAction.highlightedBackgroundColor = swipeActionHighlightedColor
+        collapseAction.textColor = swipeActionTextColor
+        collapseAction.highlightedTextColor = swipeActionHighlightedTextColor
+        collapseAction.font = swipeActionTextFont
+        collapseAction.image = swipeActionImage
+        collapseAction.highlightedImage = swipeActionHighlightedImage
+        return [collapseAction]
+    }
+    public func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        var options = SwipeTableOptions()
+        options.expansionStyle = .destructive(automaticallyDelete: false)
+        return options
     }
 }
