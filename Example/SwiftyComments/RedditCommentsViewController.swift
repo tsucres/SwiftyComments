@@ -67,7 +67,7 @@ class RedditCommentsViewController: CommentsViewController {
         currentlyDisplayed = allComments
         
         self.swipeToHide = true
-        self.swipeActionColor = RedditConstants.flashyColor
+        self.swipeActionAppearance.swipeActionColor = RedditConstants.flashyColor
     }
     
     override open func commentsView(_ tableView: UITableView, commentCellForModel commentModel: AbstractComment, atIndexPath indexPath: IndexPath) -> CommentCell {

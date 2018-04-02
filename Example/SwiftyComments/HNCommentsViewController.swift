@@ -58,8 +58,8 @@ class HNCommentsViewController: CommentsViewController, UITextViewDelegate {
         }
         
         self.swipeToHide = true
-        self.swipeActionColor = HNConstants.posterColor
-        self.swipeActionHighlightedColor = HNConstants.posterColor.withAlphaComponent(0.8)
+        self.swipeActionAppearance.swipeActionColor = HNConstants.posterColor
+        self.swipeActionAppearance.swipeActionHighlightedColor = HNConstants.posterColor.withAlphaComponent(0.8)
     }
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // Stops the refreshControl when the last cell to be display is ready
