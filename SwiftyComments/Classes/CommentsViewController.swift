@@ -172,10 +172,13 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
             _currentlyDisplayed[indexPath.row+1].level > com.level // if replies are displayed
     }
     
+    open func commentsView(_ tableView: UITableView, isCommentExpandable commentModel: AbstractComment, atIndexPath indexPath: IndexPath) -> Bool {
+        return swipeToHide && isCellExpanded(indexPath: indexPath)
+    }
     
     public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
-        guard swipeToHide && isCellExpanded(indexPath: indexPath) else { return nil }
+        guard commentsView(tableView, isCommentExpandable: _currentlyDisplayed[indexPath.row], atIndexPath: indexPath) else { return nil }
         
         let collapseAction = SwipeAction(style: .destructive, title: swipeActionText) { [weak self](action, indexPath) in
             if self != nil {

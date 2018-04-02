@@ -11,10 +11,13 @@ import SwiftyComments
 
 struct HNConstants {
     static let sepColor = #colorLiteral(red: 0.09410729259, green: 0.09412366897, blue: 0.09409976751, alpha: 1)
-    static let posterColor = UIColor(red: 165/255, green: 165/255, blue: 165/255, alpha: 1)
+    static let posterColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
     static let backgroundColor = #colorLiteral(red: 0.09410729259, green: 0.09412366897, blue: 0.09409976751, alpha: 1)
     static let commentMarginColor = #colorLiteral(red: 0.09410729259, green: 0.09412366897, blue: 0.09409976751, alpha: 1)
     static let identationColor = #colorLiteral(red: 0.09410729259, green: 0.09412366897, blue: 0.09409976751, alpha: 1)
+    
+    static let rootCommentMarginColor = #colorLiteral(red: 0.1176350638, green: 0.117654033, blue: 0.1176263615, alpha: 1)
+    static let metadataColor = #colorLiteral(red: 0.4038896859, green: 0.4039401412, blue: 0.4038665593, alpha: 1)
 }
 
 
@@ -60,14 +63,34 @@ class HNCommentCell: CommentCell {
         }
     }
     
+    open var isFolded: Bool {
+        get {
+            return self.content.isFolded
+        } set(value) {
+            self.content.isFolded = value
+        }
+    }
+    
+    /// Change the value of the isFolded property. Add a color animation.
+    func animateIsFolded(fold: Bool) {
+        UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
+            self.content.backgroundColor = HNConstants.posterColor.withAlphaComponent(0.1)
+        }, completion: { (done) in
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
+                self.content.backgroundColor = HNConstants.backgroundColor
+            }, completion: nil)
+        })
+        self.content.isFolded = fold
+    }
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commentViewContent = HNCommentView()
         self.backgroundColor = HNConstants.backgroundColor
         self.commentMarginColor = HNConstants.commentMarginColor
         self.indentationIndicatorColor = HNConstants.identationColor
-        self.rootCommentMarginColor = #colorLiteral(red: 0.1176350638, green: 0.117654033, blue: 0.1176263615, alpha: 1)
-        self.indentationColor = #colorLiteral(red: 0.1176350638, green: 0.117654033, blue: 0.1176263615, alpha: 1)
+        self.rootCommentMarginColor = HNConstants.rootCommentMarginColor
+        self.indentationColor = HNConstants.rootCommentMarginColor
         self.commentMargin = 0
     }
     required init?(coder aDecoder: NSCoder) {
@@ -76,25 +99,25 @@ class HNCommentCell: CommentCell {
 }
 
 class HNCommentView: UIView {
-    var body: NSAttributedString? {
+    open var body: NSAttributedString? {
         didSet {
             self.bodyView.attributedText = body
         }
     }
     
-    var posterName: String? {
+    open var posterName: String? {
         didSet {
             self.usernameView.setTitle(posterName, for: .normal)
         }
     }
     
-    var date: String! {
+    open var date: String! {
         didSet {
             self.createdView.text = date
         }
     }
     
-    var nReplies: Int! {
+    open var nReplies: Int! {
         didSet {
             if nReplies > 0 {
                 self.nRepliesLabel.text = "\(nReplies!) replies"
@@ -104,11 +127,22 @@ class HNCommentView: UIView {
             
         }
     }
-    var upvoted: Bool = false {
+    open var upvoted: Bool = false {
         didSet {
-            self.upvoteBtn.tintColor = upvoted ? #colorLiteral(red: 0.08024211973, green: 0.7872473598, blue: 0.2486046553, alpha: 1) : #colorLiteral(red: 0.4038896859, green: 0.4039401412, blue: 0.4038665593, alpha: 1)
+            self.upvoteBtn.tintColor = upvoted ? #colorLiteral(red: 0.08024211973, green: 0.7872473598, blue: 0.2486046553, alpha: 1) : HNConstants.metadataColor
         }
     }
+    open var isFolded: Bool! = false {
+        didSet {
+            if isFolded {
+                fold()
+            } else {
+                unfold()
+            }
+        }
+    }
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = HNConstants.backgroundColor
@@ -118,6 +152,20 @@ class HNCommentView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    private func fold() {
+        bodyViewHeightConstraint?.isActive = true
+        controlBarHeightConstraint?.isActive = true
+        controlBarContainerView.isHidden = true
+    }
+    private func unfold() {
+        bodyViewHeightConstraint?.isActive = false
+        controlBarHeightConstraint?.isActive = false
+        controlBarContainerView.isHidden = false
+    }
+    
+    private var bodyViewHeightConstraint: NSLayoutConstraint?
+    private var controlBarHeightConstraint: NSLayoutConstraint?
     
     
     private let HMargin: CGFloat = 8
@@ -145,16 +193,14 @@ class HNCommentView: UIView {
         bodyView.topAnchor.constraint(equalTo: usernameView.bottomAnchor).isActive = true
         bodyView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -HMargin).isActive = true
         bodyView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: HMargin).isActive = true
+        bodyViewHeightConstraint = bodyView.heightAnchor.constraint(equalToConstant: 0)
         
         setupControlBar()
-        
+        controlBarHeightConstraint = controlBarContainerView.heightAnchor.constraint(equalToConstant: 0)
     }
     
     /// Add Upvote & Reply buttons (and helper labels) to the view
     private func setupControlBar() {
-        let controlBarContainerView = UIView()
-        
-       
         controlBarContainerView.addSubview(replyBtn)
         replyBtn.translatesAutoresizingMaskIntoConstraints = false
         replyBtn.topAnchor.constraint(equalTo: controlBarContainerView.topAnchor).isActive = true
@@ -177,11 +223,12 @@ class HNCommentView: UIView {
         controlBarContainerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -VMargin).isActive = true
         
     }
+    let controlBarContainerView = UIView()
     
     let nRepliesLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "0 reply"
-        lbl.textColor = #colorLiteral(red: 0.262745098, green: 0.262745098, blue: 0.262745098, alpha: 1)
+        lbl.textColor = HNConstants.metadataColor
         lbl.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.thin)
         return lbl
     }()
@@ -193,11 +240,11 @@ class HNCommentView: UIView {
         
         
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.thin)
-        btn.setTitleColor(#colorLiteral(red: 0.4038896859, green: 0.4039401412, blue: 0.4038665593, alpha: 1), for: .normal)
+        btn.setTitleColor(HNConstants.metadataColor, for: .normal)
         btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         
-        btn.tintColor = #colorLiteral(red: 0.4038896859, green: 0.4039401412, blue: 0.4038665593, alpha: 1)
+        btn.tintColor = HNConstants.metadataColor
         
         return btn
     }()
@@ -209,11 +256,11 @@ class HNCommentView: UIView {
         
         
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.thin)
-        btn.setTitleColor(#colorLiteral(red: 0.4038896859, green: 0.4039401412, blue: 0.4038665593, alpha: 1), for: .normal)
+        btn.setTitleColor(HNConstants.metadataColor, for: .normal)
         btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 5)
         btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         
-        btn.tintColor = #colorLiteral(red: 0.4038896859, green: 0.4039401412, blue: 0.4038665593, alpha: 1)
+        btn.tintColor = HNConstants.metadataColor
         
         return btn
     }()
@@ -230,7 +277,7 @@ class HNCommentView: UIView {
 
     let usernameView: UIButton = {
         let btn = UIButton()
-        btn.setTitleColor(#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), for: .normal)
+        btn.setTitleColor(HNConstants.posterColor, for: .normal)
         btn.setTitle("Anonymous", for: .normal)
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold)
         return btn
@@ -238,7 +285,7 @@ class HNCommentView: UIView {
     let createdView: UILabel = {
         let lbl = UILabel()
         lbl.text = "6 days ago"
-        lbl.textColor = #colorLiteral(red: 0.262745098, green: 0.262745098, blue: 0.262745098, alpha: 1)
+        lbl.textColor = HNConstants.metadataColor
         lbl.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.thin)
         return lbl
     }()

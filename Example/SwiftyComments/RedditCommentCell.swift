@@ -62,28 +62,21 @@ class RedditCommentCell: CommentCell {
         get {
             return self.content.isFolded
         } set(value) {
-            if value != isFolded {
-                UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [.autoreverse], animations: {
-                    self.backgroundColor = RedditConstants.flashyColor.withAlphaComponent(0.06)
-                }, completion: { (done) in
-                    self.backgroundColor = RedditConstants.backgroundColor
-                })
-                
-                self.content.isFolded = value
-            }
-            
+            self.content.isFolded = value
         }
     }
-    lazy var foldBackgroundColorAnimation: CABasicAnimation = {
-        let anim = CABasicAnimation(keyPath: "backgroundColor")
-        anim.duration = 1.0;
-        anim.autoreverses = true
-        var h:CGFloat = 0.0, s:CGFloat = 0.0, l:CGFloat = 0.0, a:CGFloat = 0.0
-        RedditConstants.backgroundColor.getHue(&h, saturation: &s, brightness: &l, alpha: &a)
-        anim.fromValue = RedditConstants.backgroundColor
-        anim.toValue = UIColor.init(hue: h, saturation: s, brightness: l+0.2, alpha: a);
-        return anim;
-    }()
+    /// Change the value of the isFolded property. Add a color animation.
+    func animateIsFolded(fold: Bool) {
+        UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
+            self.content.backgroundColor = RedditConstants.flashyColor.withAlphaComponent(0.06)
+        }, completion: { (done) in
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: [], animations: {
+                self.content.backgroundColor = RedditConstants.backgroundColor
+            }, completion: nil)
+        })
+        self.content.isFolded = fold
+    }
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commentViewContent = RedditCommentView()

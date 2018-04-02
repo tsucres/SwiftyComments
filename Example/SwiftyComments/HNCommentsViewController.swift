@@ -8,7 +8,31 @@
 import UIKit
 import SwiftyComments
 
-
+class FoldableHNCommentsViewController: HNCommentsViewController, CommentsViewDelegate {
+    
+    func commentCellExpanded(atIndex index: Int) {
+        updateCellFoldState(false, atIndex: index)
+    }
+    
+    func commentCellFolded(atIndex index: Int) {
+        updateCellFoldState(true, atIndex: index)
+    }
+    
+    private func updateCellFoldState(_ folded: Bool, atIndex index: Int) {
+        let cell = tableView.cellForRow(at: IndexPath(row: index, section: 0)) as! HNCommentCell
+        cell.animateIsFolded(fold: folded)
+        (self.currentlyDisplayed[index] as! RichComment).isFolded = folded
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+    }
+    
+    override func viewDidLoad() {
+        self.fullyExpanded = true
+        super.viewDidLoad()
+        self.delegate = self
+        
+    }
+}
 class HNCommentsViewController: CommentsViewController, UITextViewDelegate {
     private let commentCellId = "hnComentCellId"
     private var allComments: [AttributedTextComment] = [] // All the comments (nested, not in a linear format)
@@ -29,11 +53,20 @@ class HNCommentsViewController: CommentsViewController, UITextViewDelegate {
             DispatchQueue.main.async {
                 self.currentlyDisplayed = self.allComments
                 self.tableView.reloadData()
-                self.refreshControl!.endRefreshing()
+                //self.refreshControl!.endRefreshing()
             }
         }
+        
+        self.swipeToHide = true
+        self.swipeActionColor = HNConstants.posterColor
+        self.swipeActionHighlightedColor = HNConstants.posterColor.withAlphaComponent(0.8)
     }
-    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // Stops the refreshControl when the last cell to be display is ready
+        if indexPath.row == tableView.indexPathsForVisibleRows?.last?.row {
+            self.refreshControl!.endRefreshing()
+        }
+    }
     func generateAttributedTexts(For comments: [AttributedTextComment]) {
         for com in comments {
             com.attributedContent = HNCommentContentParser.buildAttributedText(From: com.body!)
@@ -47,11 +80,9 @@ class HNCommentsViewController: CommentsViewController, UITextViewDelegate {
         self.navigationController?.navigationBar.barTintColor = .black
         UIApplication.shared.statusBarStyle = .lightContent
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> CommentCell {
-        //let commentCell = tableView.dequeueReusableCell(withIdentifier: commentCellId, for: indexPath) as! HNCommentCell
+    override func commentsView(_ tableView: UITableView, commentCellForModel commentModel: AbstractComment, atIndexPath indexPath: IndexPath) -> CommentCell {
         let commentCell = tableView.dequeueReusableCell(withIdentifier: commentCellId) as! HNCommentCell
-        let comment = currentlyDisplayed[indexPath.row] as! AttributedTextComment
+        let comment = commentModel as! AttributedTextComment
         commentCell.level = comment.level
         commentCell.commentContentAttributed = comment.attributedContent
         commentCell.posterName = comment.posterName
@@ -64,17 +95,18 @@ class HNCommentsViewController: CommentsViewController, UITextViewDelegate {
         commentCell.content.replyBtn.addTarget(self, action: #selector(replied), for: .touchUpInside)
         commentCell.content.replyBtn.tag = indexPath.row
         
-        
+        commentCell.delegate = nil
+        commentCell.isFolded = comment.isFolded && !isCellExpanded(indexPath: indexPath)
         // ===========================================
         // If you want to experiment loading the attributedText with DocumentType.html
         // uncoment the following
         /*
-        if let data = comment.body!.data(using: String.Encoding.utf8, allowLossyConversion: true) {
-            commentCell.commentContentAttributed = try? NSAttributedString(data: data,
-                          options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html],
-                          documentAttributes: nil)
-        }
-        */
+         if let data = comment.body!.data(using: String.Encoding.utf8, allowLossyConversion: true) {
+         commentCell.commentContentAttributed = try? NSAttributedString(data: data,
+         options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html],
+         documentAttributes: nil)
+         }
+         */
         // ===========================================
         
         
@@ -99,6 +131,4 @@ class HNCommentsViewController: CommentsViewController, UITextViewDelegate {
         return true
     }*/
     
-    
-    //func textV
 }

@@ -21,7 +21,7 @@ class FoldableRedditCommentsViewController: RedditCommentsViewController, Commen
     
     private func updateCellFoldState(_ folded: Bool, atIndex index: Int) {
         let cell = tableView.cellForRow(at: IndexPath(row: index, section: 0)) as! RedditCommentCell
-        cell.isFolded = folded
+        cell.animateIsFolded(fold: folded)
         (self.currentlyDisplayed[index] as! RichComment).isFolded = folded
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
@@ -32,15 +32,13 @@ class FoldableRedditCommentsViewController: RedditCommentsViewController, Commen
         super.viewDidLoad()
         self.delegate = self
         
-        self.swipeToHide = true
-        self.swipeActionColor = RedditConstants.flashyColor
-        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCom: AbstractComment = currentlyDisplayed[indexPath.row]
         let selectedIndex = indexPath.row
         
+        // Enable cell folding for comments without replies
         if selectedCom.replies.count == 0 {
             if (selectedCom as! RichComment).isFolded {
                 commentCellExpanded(atIndex: selectedIndex)
@@ -67,6 +65,9 @@ class RedditCommentsViewController: CommentsViewController {
         allComments = RandomDiscussion.generate().comments
         
         currentlyDisplayed = allComments
+        
+        self.swipeToHide = true
+        self.swipeActionColor = RedditConstants.flashyColor
     }
     
     override open func commentsView(_ tableView: UITableView, commentCellForModel commentModel: AbstractComment, atIndexPath indexPath: IndexPath) -> CommentCell {
@@ -77,8 +78,7 @@ class RedditCommentsViewController: CommentsViewController {
         commentCell.posterName = comment.posterName
         commentCell.date = comment.soMuchTimeAgo()
         commentCell.upvotes = comment.upvotes
-        commentCell.isFolded = comment.isFolded
-        commentCell.delegate = self
+        commentCell.isFolded = comment.isFolded && !isCellExpanded(indexPath: indexPath)
         return commentCell
     }
     
@@ -90,8 +90,3 @@ class RedditCommentsViewController: CommentsViewController {
     }
 }
 
-class FoldableRedditCommentCell: RedditCommentCell {
-    
-    
-    
-}

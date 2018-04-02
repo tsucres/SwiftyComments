@@ -9,12 +9,13 @@
 import UIKit
 
 class DemosTableViewController: UITableViewController {
-    private let demoNames = ["Basic", "Imgur", "Reddit", "Hackernews", "Imgur - Full expanded", "Reddit - foldable"]
+    private let demoNames = ["Basic", "Imgur", "Reddit", "Hackernews", "Hackernews - foldable", "Imgur - Full expanded", "Reddit - foldable"]
     
     private let controllerClasses = [SimpleCommentsViewController.self,
                                      ImgurCommentsViewController.self,
                                      RedditCommentsViewController.self,
                                      HNCommentsViewController.self,
+                                     FoldableHNCommentsViewController.self,
                                      FullyExpandedImgurVC.self,
                                      FoldableRedditCommentsViewController.self]
     
