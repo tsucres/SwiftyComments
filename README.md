@@ -41,9 +41,10 @@ pod 'SwiftyComments', :git => 'https://github.com/tsucres/SwiftyComments.git'
 
 Basically, all you have to do is 
 
-1. define a view for your comments (typically, a view containing the poster's name, a datetime, the content of the comment, ...). This view will be the main subview of each `CommentCell` (subclass of `UITableViewCell`);
-2. customize the appearance of the tableView through the available properties of the `CommentCell` class;
-3. feed your models to the `CommentsViewController `.
+1. Import ```import SwiftyComments```
+2. define a view for your comments (typically, a view containing the poster's name, a datetime, the content of the comment, ...). This view will be the main subview of each `CommentCell` (subclass of `UITableViewCell`);
+3. customize the appearance of the tableView through the available properties of the `CommentCell` class;
+4. feed your models to the `CommentsViewController `.
 
 
 ### Details
