@@ -50,8 +50,11 @@ Basically, all you have to do is
 ### Details
 
 Here are more details about the previous steps: 
-
-##### 1) Build your CommentCell
+##### 1) Import 
+```swift
+import SwiftyComments
+```
+##### 2) Build your CommentCell
 
 A `CommentCell` is basically 1 UIView showing your comment + an indentation. Here's a basic implementation: 
 
@@ -74,7 +77,7 @@ class YourCommentCell: CommentCell {
 
 ```
 
-##### 2) Customize your cell
+##### 3) Customize your cell
 
 The surroundings of your comment view (such as the indentation, the margins) are customizable through several properties of the `CommentCell` class : 
 
@@ -100,7 +103,7 @@ The surroundings of your comment view (such as the indentation, the margins) are
 
 
 
-##### 3) Load the data
+##### 4) Load the data
 
 The `CommentsViewController` class inherits from `UITableViewController` and takes care of loading your cells. All you have to do is fill the `allComments` property with your models and override the `tableView(_:cellForRowAt:)` method: 
 
