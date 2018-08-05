@@ -7,7 +7,7 @@ podfile: Example/Podfile
 before_install:
   - pod install --project-directory=Example
 script:
-  - xcodebuild -project 'Example/SwiftyComments.xcodeproj' -scheme 'SwiftyComments-Example' -sdk iphonesimulator build
+  - xcodebuild -workspace Example/SwiftyComments.xcworkspace -scheme 'SwiftyComments-Example' -sdk iphonesimulator build
 #cache:
 #  directories:    
 #    - Pods    
