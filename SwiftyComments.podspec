@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyComments'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'UITableView based component designed to display a hierarchy of expandable/foldable comments.'
 
   s.description      = <<-DESC
