@@ -2,3 +2,8 @@ language: objective-c
 osx_image: xcode9.4
 script:
   - xcodebuild -project 'Example/SwiftyComments.xcodeproj' -scheme 'SwiftyComments-Example' -sdk iphonesimulator build
+cache:
+  directories:    
+    - Pods    
+    - $HOME/.cocoapods    
+    - $HOME/Library/Caches/CocoaPods
