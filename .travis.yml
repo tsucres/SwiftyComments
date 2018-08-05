@@ -4,6 +4,8 @@ osx_image: xcode9.4
 #xcode_scheme: SwiftyComments-Example
 #xcode_sdk: iphonesimulator9.3
 podfile: Example/Podfile
+before_install:
+  - pod install --project-directory=Example
 script:
   - xcodebuild -project 'Example/SwiftyComments.xcodeproj' -scheme 'SwiftyComments-Example' -sdk iphonesimulator build
 #cache:
