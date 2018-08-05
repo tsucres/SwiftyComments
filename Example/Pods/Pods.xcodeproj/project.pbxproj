@@ -77,7 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04C9AF77D86E5547DBBCE75EC3734056 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		04C9AF77D86E5547DBBCE75EC3734056 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		09756546509FF47888777421A60419D4 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
 		0B29958FE1B00AE38C4060FC154DB009 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
 		0CD864DD0F411305ED11F61892AD5375 /* Pods-SwiftyComments_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftyComments_Example-dummy.m"; sourceTree = "<group>"; };
@@ -85,10 +85,10 @@
 		11237BE25425FB067FEA09B33EB6BFAC /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
 		131F4DC10535E52B34E2AA6AE6EF9B02 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
 		1438CC164E1450739087C06DFD0CA5B8 /* Pods-SwiftyComments_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyComments_Example-umbrella.h"; sourceTree = "<group>"; };
-		2094A7EB0BAF3EE2A6C78614DC363EF8 /* SwiftyComments.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SwiftyComments.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2094A7EB0BAF3EE2A6C78614DC363EF8 /* SwiftyComments.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SwiftyComments.podspec; sourceTree = "<group>"; };
 		22E2B7B0C35AC639A505150EC491EB49 /* SwiftScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftScanner-umbrella.h"; sourceTree = "<group>"; };
 		24E51E0779169B930483C71F87F209C7 /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = SwiftyComments/Assets/Media.xcassets; sourceTree = "<group>"; };
-		29C67C0EB2E3F6A294D87573DD910D3D /* Pods_SwiftyComments_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftyComments_Example.framework; path = "Pods-SwiftyComments_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C67C0EB2E3F6A294D87573DD910D3D /* Pods_SwiftyComments_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyComments_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A25039EDC8373FD370CE63155F6DF0E /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
 		32266F42A136101C41F9B18D578CB853 /* SwiftyComments-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-prefix.pch"; sourceTree = "<group>"; };
 		34A11A59596AB72D8178A9E5E7742E55 /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
@@ -97,21 +97,21 @@
 		398103CACE08F60DA15E964CB93B5191 /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
 		494DC1597FA2C0A23F7911D44C4BE67C /* SwiftyComments-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyComments-umbrella.h"; sourceTree = "<group>"; };
 		4DAAD4C7B8BB4C465D9F1E7D55768BB0 /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
-		4F41B25787208D62B60612F571602B60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4F41B25787208D62B60612F571602B60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		514865E38A4460B0785607468772AA08 /* Pods-SwiftyComments_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyComments_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		554D5FB18E59D569DC18CEFDF2821A1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5794D95E9071378DD1A28BD09B9D6E70 /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5794D95E9071378DD1A28BD09B9D6E70 /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B99C0BEEE966AF050C3B82FBADF2C0 /* SwiftScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftScanner.xcconfig; sourceTree = "<group>"; };
 		5C7E5815023C7EF9B6D7038E2BC16CB0 /* SwipeTableOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableOptions.swift; path = Source/SwipeTableOptions.swift; sourceTree = "<group>"; };
-		657892915C43A54C562E2C8FEFF5AB24 /* SwiftyComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyComments.framework; path = SwiftyComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		657892915C43A54C562E2C8FEFF5AB24 /* SwiftyComments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyComments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CFA4F80C547A1EA09F1D19F7E70A5D /* Pods-SwiftyComments_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyComments_Example-frameworks.sh"; sourceTree = "<group>"; };
 		6A066BD0513D30576DC866BF61C030A6 /* SwiftyComments.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyComments.modulemap; sourceTree = "<group>"; };
 		6B4DAE851C530A1EEF2775BA1B1DBA55 /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
 		6BCCF126B4FDB07594374D58F316DCBE /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
-		6F4B917F67AA7D833617552A880DDA3C /* SwiftScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftScanner.framework; path = SwiftScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F4B917F67AA7D833617552A880DDA3C /* SwiftScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		733BBD97E0A042D2A1AC273616840A6B /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
 		83F8FA843591BC6C8A34EAE28A667B50 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93AB0F97DB9F885D6F71075C4D856F4C /* CommentsViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommentsViewDelegate.swift; path = SwiftyComments/Classes/CommentsViewDelegate.swift; sourceTree = "<group>"; };
 		9EC817A0AA9F39BE0EFA554D4DC18448 /* SwiftyComments-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyComments-dummy.m"; sourceTree = "<group>"; };
 		9F3F6F85B0BF3AC2D8AF481A705C69DF /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
@@ -268,7 +268,6 @@
 				C219D5E469D7602D617E6CDD1ACF58B9 /* SwipeTransitionLayout.swift */,
 				588D7860369EB2D46C68BC411A535B1E /* Support Files */,
 			);
-			name = SwipeCellKit;
 			path = SwipeCellKit;
 			sourceTree = "<group>";
 		};
@@ -368,7 +367,6 @@
 				D0F2E0DFE8EBA7512EB9DAC2EBA6CD6A /* StringScanner.swift */,
 				AEDD88B0C08B3E063555B1E4FB207241 /* Support Files */,
 			);
-			name = SwiftScanner;
 			path = SwiftScanner;
 			sourceTree = "<group>";
 		};

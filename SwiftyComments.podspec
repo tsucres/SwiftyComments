@@ -22,5 +22,5 @@ SwiftyComments is a UITableView based component designed to display a hierarchy 
   s.dependency 'SwipeCellKit'
   
   s.frameworks = 'UIKit'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
+  s.swift_version = '4.1'
 end

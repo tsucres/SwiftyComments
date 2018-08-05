@@ -12,5 +12,5 @@ import Foundation
 public protocol AbstractComment: class {
     var replies: [AbstractComment]! { get set }
     var level: Int! { get set }
-    weak var replyTo: AbstractComment? { get set }
+    /*weak*/ var replyTo: AbstractComment? { get set }
 }
