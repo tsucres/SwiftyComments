@@ -7,7 +7,7 @@
     <a href="https://travis-ci.org/tsucres/SwiftyComments">
       <img src="https://img.shields.io/travis/tsucres/SwiftyComments.svg">
     </a>
-    <img src="https://img.shields.io/badge/Swift-4.0-orange.svg" />
+    <img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
     <a href="https://opensource.org/licenses/MIT">
       <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" />
     </a>
@@ -28,11 +28,19 @@ Just copy the `.swift` files from the [`SwiftyComments/Classes`](SwiftyComments/
 
 ### Cocoapod
 
-Add the following line to your Podfile:
+Add the following line to your Podfile.
 
+For Swift 5: 
 
 ```ruby
 pod 'SwiftyComments', :git => 'https://github.com/tsucres/SwiftyComments.git'
+```
+
+For swift 4:
+
+
+```ruby
+pod 'SwiftyComments', :git => 'https://github.com/tsucres/SwiftyComments.git', :branch => 'swift4'
 ```
 
 ## Usage
