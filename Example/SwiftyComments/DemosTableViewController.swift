@@ -19,16 +19,31 @@ class DemosTableViewController: UITableViewController {
                                      FullyExpandedImgurVC.self,
                                      FoldableRedditCommentsViewController.self]
     
+    private var defaultNavBarTintColor: UIColor?
+    private var defaultNavTintColor: UIColor?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.defaultNavBarTintColor = self.navigationController?.navigationBar.barTintColor
+        self.defaultNavTintColor = self.navigationController?.navigationBar.tintColor
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = .white
-        self.navigationController?.navigationBar.tintColor = .black
-        UIApplication.shared.statusBarStyle = .default
+        if #available(iOS 13.0, *) {
+            self.navigationController?.navigationBar.barTintColor = .systemBackground
+            self.navigationController?.navigationBar.tintColor = .label
+        } else {
+            self.navigationController?.navigationBar.barTintColor = self.defaultNavBarTintColor ?? .white
+            self.navigationController?.navigationBar.tintColor = self.defaultNavTintColor ?? .black
+        }
+        
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController!.pushViewController(controllerClasses[indexPath.row].init(), animated: true)
     }

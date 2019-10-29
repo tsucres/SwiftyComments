@@ -112,6 +112,9 @@ class ImgurCommentsViewController: CommentsViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.barTintColor = ImgurConstants.backgroundColor
         self.navigationController?.navigationBar.tintColor = ImgurConstants.posterColor
-        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }

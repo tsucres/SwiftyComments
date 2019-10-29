@@ -78,8 +78,12 @@ class HNCommentsViewController: CommentsViewController, UITextViewDelegate {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.barTintColor = .black
-        UIApplication.shared.statusBarStyle = .lightContent
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func commentsView(_ tableView: UITableView, commentCellForModel commentModel: AbstractComment, atIndexPath indexPath: IndexPath) -> CommentCell {
         let commentCell = tableView.dequeueReusableCell(withIdentifier: commentCellId) as! HNCommentCell
         let comment = commentModel as! AttributedTextComment

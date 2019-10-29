@@ -86,7 +86,10 @@ class RedditCommentsViewController: CommentsViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.barTintColor = RedditConstants.flashyColor
         self.navigationController?.navigationBar.tintColor = .white
-        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
