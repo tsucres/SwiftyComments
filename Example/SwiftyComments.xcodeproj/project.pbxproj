@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1CC498939563D62229064CAC /* Pods-SwiftyComments_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyComments_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3AFAAE3085DB5675D4B28EB1 /* SwiftyComments.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyComments.podspec; path = ../SwiftyComments.podspec; sourceTree = "<group>"; };
+		3AFAAE3085DB5675D4B28EB1 /* SwiftyComments.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftyComments.podspec; path = ../SwiftyComments.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		538BD62B34BBE6E18F325CCA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftyComments_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyComments_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,6 +229,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

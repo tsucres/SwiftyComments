@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyComments'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'UITableView based component designed to display a hierarchy of expandable/foldable comments.'
 
   s.description      = <<-DESC
@@ -19,7 +19,7 @@ SwiftyComments is a UITableView based component designed to display a hierarchy 
   s.source_files = 'SwiftyComments/Classes/**/*'
   s.resources = "SwiftyComments/Assets/*.xcassets"
   
-  s.dependency 'SwipeCellKit'
+  s.dependency 'SwipeCellKit', '2.6.0'
   
   s.frameworks = 'UIKit'
   s.swift_version = '4.1'

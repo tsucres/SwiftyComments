@@ -1,6 +1,6 @@
 {
   "name": "SwiftyComments",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "UITableView based component designed to display a hierarchy of expandable/foldable comments.",
   "description": "SwiftyComments is a UITableView based component designed to display a hierarchy of expandable/foldable comments.",
   "homepage": "https://github.com/tsucres/SwiftyComments",
@@ -18,7 +18,7 @@
   },
   "source": {
     "git": "https://github.com/tsucres/SwiftyComments.git",
-    "tag": "0.1.0"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "9.0"
@@ -27,8 +27,9 @@
   "resources": "SwiftyComments/Assets/*.xcassets",
   "dependencies": {
     "SwipeCellKit": [
-
+      "2.6.0"
     ]
   },
-  "frameworks": "UIKit"
+  "frameworks": "UIKit",
+  "swift_version": "4.1"
 }

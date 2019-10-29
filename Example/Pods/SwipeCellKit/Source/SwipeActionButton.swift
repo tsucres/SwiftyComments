@@ -15,16 +15,27 @@ class SwipeActionButton: UIButton {
     var maximumImageHeight: CGFloat = 0
     var verticalAlignment: SwipeVerticalAlignment = .centerFirstBaseline
     
+    
     var currentSpacing: CGFloat {
-        return (currentTitle?.isEmpty == false && maximumImageHeight > 0) ? spacing : 0
+        return (currentTitle?.isEmpty == false && imageHeight > 0) ? spacing : 0
     }
     
     var alignmentRect: CGRect {
         let contentRect = self.contentRect(forBounds: bounds)
         let titleHeight = titleBoundingRect(with: verticalAlignment == .centerFirstBaseline ? CGRect.infinite.size : contentRect.size).integral.height
-        let totalHeight = maximumImageHeight + titleHeight + currentSpacing
+        let totalHeight = imageHeight + titleHeight + currentSpacing
 
         return contentRect.center(size: CGSize(width: contentRect.width, height: totalHeight))
+    }
+    
+    private var imageHeight: CGFloat {
+        get {
+            return currentImage == nil ? 0 : maximumImageHeight
+        }
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: UIView.noIntrinsicMetric, height: contentEdgeInsets.top + alignmentRect.height + contentEdgeInsets.bottom)
     }
     
     convenience init(action: SwipeAction) {
@@ -71,19 +82,19 @@ class SwipeActionButton: UIButton {
         
         return title.boundingRect(with: size,
                                   options: [.usesLineFragmentOrigin],
-                                  attributes: [NSAttributedStringKey.font: font],
+                                  attributes: [NSAttributedString.Key.font: font],
                                   context: nil).integral
     }
     
     override func titleRect(forContentRect contentRect: CGRect) -> CGRect {
         var rect = contentRect.center(size: titleBoundingRect(with: contentRect.size).size)
-        rect.origin.y = alignmentRect.minY + maximumImageHeight + currentSpacing
+        rect.origin.y = alignmentRect.minY + imageHeight + currentSpacing
         return rect.integral
     }
     
     override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
         var rect = contentRect.center(size: currentImage?.size ?? .zero)
-        rect.origin.y = alignmentRect.minY + (maximumImageHeight - rect.height) / 2
+        rect.origin.y = alignmentRect.minY + (imageHeight - rect.height) / 2
         return rect
     }
 }
