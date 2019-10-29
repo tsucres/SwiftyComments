@@ -91,7 +91,7 @@ open class CommentCell: SwipeTableViewCell {
     
     open var level = 0 {
         didSet {
-            contentView.autoresizingMask = UIViewAutoresizing.flexibleHeight // solves a warning (http://stackoverflow.com/questions/26100053/uitableviewcells-contentview-gets-unwanted-height-44-constraint)
+            contentView.autoresizingMask = UIView.AutoresizingMask.flexibleHeight // solves a warning (http://stackoverflow.com/questions/26100053/uitableviewcells-contentview-gets-unwanted-height-44-constraint)
             indentationConstraint?.constant = CGFloat(self.level*indentationUnit)
             updateIndentationIndicators()
             updateCommentMargin()
@@ -100,7 +100,7 @@ open class CommentCell: SwipeTableViewCell {
     
     
     
-    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         indentationColor = DefaultValues.identationColor

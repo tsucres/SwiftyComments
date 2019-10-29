@@ -28,7 +28,7 @@ class SimpleCommentCell: CommentCell {
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commentViewContent = SimpleCommentView()
         
@@ -117,7 +117,7 @@ class SimpleCommentView: UIView {
     }()
     var controlView: UIView = {
         let v = UIView()
-        let actionBtn = UIButton(type: UIButtonType.infoDark)
+        let actionBtn = UIButton(type: UIButton.ButtonType.infoDark)
         actionBtn.setTitle("Like", for: .normal)
         
         v.addSubview(actionBtn)

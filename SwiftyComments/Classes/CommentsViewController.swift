@@ -68,14 +68,14 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
         super.viewDidLoad()
         
         // Tableview style
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
 
         if #available(iOS 11.0, *) {
             tableView.estimatedRowHeight = 0
             tableView.estimatedSectionFooterHeight = 0
             tableView.estimatedSectionHeaderHeight = 0
         } else {
-            tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.rowHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 400.0
         }
     }
@@ -110,10 +110,10 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
     }
     
     override open func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     override open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -151,7 +151,7 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
                 tableView.insertRows(at: indexPaths, with: .bottom)
                 
                 if makeExpandedCellsVisible {
-                    tableView.scrollToRow(at: IndexPath(row: selectedIndex+1, section: indexPath.section), at: UITableViewScrollPosition.middle, animated: false)
+                    tableView.scrollToRow(at: IndexPath(row: selectedIndex+1, section: indexPath.section), at: UITableView.ScrollPosition.middle, animated: false)
                 }
                 delegate?.commentCellExpanded(atIndex: selectedIndex)
             }

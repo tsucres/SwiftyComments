@@ -94,7 +94,7 @@ class ImgurCommentCell: CommentCell {
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commentViewContent = ImgurCommentView()
         
@@ -265,8 +265,8 @@ class ImgurCommentView: UIView {
         
         return btn
     }()
-    let replyButton = UIButton(type: UIButtonType.custom)
-    let moreBtn = UIButton(type: UIButtonType.custom)
+    let replyButton = UIButton(type: UIButton.ButtonType.custom)
+    let moreBtn = UIButton(type: UIButton.ButtonType.custom)
     private func setupControlView() {
         
         replyButton.setTitle(" Reply", for: .normal)

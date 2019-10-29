@@ -25,23 +25,23 @@ class HNCommentContentParser {
         paragraphStyle.lineSpacing = 0.1*font.lineHeight
         attributedText.addAttributes([.font: font,
                                       .foregroundColor: textColor,
-                                      NSAttributedStringKey.paragraphStyle: paragraphStyle
+                                      NSAttributedString.Key.paragraphStyle: paragraphStyle
             ], range: NSRange.init(location: 0, length: text.count))
         for tag in tags {
             if tag.name == "a" {
                 let initialLen = text.count
                 var aContent = String(text.dropFirst(tag.range!.lowerBound))
                 aContent = String(aContent.dropLast(initialLen - tag.range!.upperBound))
-                let attributes: [NSAttributedStringKey: Any] = [.link: aContent, .underlineStyle: NSUnderlineStyle.styleSingle.rawValue, .foregroundColor: linkColor]
+                let attributes: [NSAttributedString.Key: Any] = [.link: aContent, .underlineStyle: NSUnderlineStyle.single.rawValue, .foregroundColor: linkColor]
                 attributedText.addAttributes(attributes, range: NSRange(tag.range!))
             } else if tag.name == "code" {
-                let attributes: [NSAttributedStringKey: Any] = [.font: UIFont(name: "Courier", size: 14)! ]
+                let attributes: [NSAttributedString.Key: Any] = [.font: UIFont(name: "Courier", size: 14)! ]
                 attributedText.addAttributes(attributes, range: NSRange(tag.range!))
             } else if tag.name == "i" {
-                let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.italicSystemFont(ofSize: 14)]
+                let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.italicSystemFont(ofSize: 14)]
                 attributedText.addAttributes(attributes, range: NSRange(tag.range!))
             } else if tag.name == "h1" { // for AskHN only
-                let attributes: [NSAttributedStringKey: Any] = [.font: UIFont.boldSystemFont(ofSize: 18)]
+                let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: 18)]
                 attributedText.addAttributes(attributes, range: NSRange(tag.range!))
             }
             
