@@ -75,7 +75,7 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
             tableView.estimatedSectionFooterHeight = 0
             tableView.estimatedSectionHeaderHeight = 0
         } else {
-            tableView.rowHeight = UITableView.automaticDimension
+            tableView.rowHeight = UITableViewAutomaticDimension
             tableView.estimatedRowHeight = 400.0
         }
     }
@@ -110,10 +110,10 @@ open class CommentsViewController: UITableViewController, SwipeTableViewCellDele
     }
     
     override open func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return UITableViewAutomaticDimension
     }
     override open func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return UITableViewAutomaticDimension
     }
     
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

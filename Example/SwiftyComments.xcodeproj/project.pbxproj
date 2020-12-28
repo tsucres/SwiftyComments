@@ -196,7 +196,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				1C7D96F1185F1D4EA5B9AE14 /* [CP] Embed Pods Frameworks */,
-				ABEFACA7888426DC61276D9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,7 +278,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftScanner/SwiftScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyComments/SwiftyComments.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
@@ -292,22 +291,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABEFACA7888426DC61276D9E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftyComments_Example/Pods-SwiftyComments_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
